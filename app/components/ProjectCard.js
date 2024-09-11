@@ -1,0 +1,50 @@
+import Image from 'next/image'
+
+export default function ProjectCard({ project }) {
+  return (
+    <div className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg">
+      {project.imageUrl && (
+        <div className="w-full h-48 relative overflow-hidden">
+          <Image
+            src={project.imageUrl}
+            alt={project.title}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      )}
+      <div className="px-4 py-5 sm:px-6">
+        <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+          {project.title}
+        </h3>
+        <p className="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-300">
+          {project.description}
+        </p>
+      </div>
+      <div className="border-t border-gray-200 dark:border-gray-600 px-4 py-5 sm:p-0">
+        <dl className="sm:divide-y sm:divide-gray-200 dark:divide-gray-600">
+          <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500 dark:text-gray-300">
+              Tech Stack
+            </dt>
+            <dd className="mt-1 text-sm text-gray-900 dark:text-white sm:mt-0 sm:col-span-2">
+              {project.techStack.join(', ')}
+            </dd>
+          </div>
+          {project.link && (
+            <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500 dark:text-gray-300">
+                Link
+              </dt>
+              <dd className="mt-1 text-sm text-gray-900 dark:text-white sm:mt-0 sm:col-span-2">
+                <a href={project.link} className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              </dd>
+            </div>
+          )}
+        </dl>
+      </div>
+    </div>
+  )
+}

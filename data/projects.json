@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "Music Therapy Web App",
+    "description": "A web-based music therapy application that integrates Spotify Web Playback SDK to provide mood-based music recommendations.",
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Spotify API"
+    ],
+    "link": "https://example.com/music-therapy-app",
+    "imageUrl": "/images/image.png",
+    "category": "web2"
+  },
+  {
+    "id": 2,
+    "title": "Website Summarizer",
+    "description": "A dynamic web application to summarize uploaded articles using OpenAI GPT-4 API.",
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "OpenAI API"
+    ],
+    "link": "https://website-summarizer-9915f409eeb3.herokuapp.com/",
+    "imageUrl": "/images/summarizer.png",
+    "category": "web2"
+  },
+  {
+    "id": 3,
+    "title": "Blockchain Farm",
+    "description": "A decentralized application (DApp) that lets user farm X tokens and earn.",
+    "techStack": [
+      "Solidity",
+      "Web3.js",
+      "Next"
+    ],
+    "link": "https://v2testfarmbsc.netlify.app/",
+    "imageUrl": "/images/farm.png",
+    "category": "web3"
+  }
+]
