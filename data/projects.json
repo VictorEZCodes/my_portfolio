@@ -35,5 +35,17 @@
     ],
     "link": "https://v2testfarmbsc.netlify.app/",
     "imageUrl": "/images/farm.png"
+  },
+  {
+    "id": 4,
+    "title": "Recipe Finder",
+    "description": "A dynamic web application that helps users discover new recipes based on ingredients, dietary preferences, and nutritional requirements. Leveraging the powerful Edamam API, this tool offers a vast database of recipes from around the world.",
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://v2testfarmbsc.netlify.app/",
+    "imageUrl": "/images/recipe.png"
   }
 ]
