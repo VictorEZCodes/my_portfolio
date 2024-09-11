@@ -45,7 +45,23 @@
       "CSS",
       "JavaScript"
     ],
-    "link": "https://v2testfarmbsc.netlify.app/",
+    "link": "https://victorezcodes.github.io/recipe-finder-edamam/",
     "imageUrl": "/images/recipe.png"
+  },
+  {
+    "id": 5,
+    "title": "Codexchange",
+    "description": "A pioneering decentralized platform revolutionizing the buying and selling of Web3/Web2 businesses. This innovative marketplace leverages blockchain technology to create a transparent, secure, and efficient environment for digital asset acquisitions.",
+    "techStack": [
+      "MongoDB",
+      "Next",
+      "Web3.js",
+      "Solidity",
+      "Express",
+      "Node.js",
+      "Telegram Bot"
+    ],
+    "link": "https://codexchange-833198fe44cb.herokuapp.com/",
+    "imageUrl": "/images/codexchange.png"
   }
 ]
