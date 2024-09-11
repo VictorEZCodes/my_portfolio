@@ -63,5 +63,24 @@
     ],
     "link": "https://codexchange-833198fe44cb.herokuapp.com/",
     "imageUrl": "/images/codexchange.png"
+  },
+  {
+    "id": 6,
+    "title": "Voice-Controlled Web App",
+    "description": "This innovative web application leverages cutting-edge voice recognition technology to create an interactive, hands-free user experience. Built with JavaScript and powered by various APIs, including OpenAI's GPT-3.5-turbo, the app can understand and respond to voice commands, providing a wide range of functionalities",
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "OpenAI API",
+      "ResponsiveVoice API",
+      "Express",
+      "Node.js",
+      "OpenWeatherMap API",
+      "API Ninjas",
+      "Wit.ai"
+    ],
+    "link": "https://voice-controlled-ai-web-app-40359552662b.herokuapp.com/",
+    "imageUrl": "/images/voice_web_app.png"
   }
 ]
