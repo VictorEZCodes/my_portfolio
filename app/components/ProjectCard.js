@@ -1,27 +1,40 @@
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function ProjectCard({ project }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
   return (
-    <div className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg">
+    <div className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg flex flex-col h-full">
       {project.imageUrl && (
         <div className="w-full h-48 relative overflow-hidden">
           <Image
             src={project.imageUrl}
             alt={project.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
       )}
-      <div className="px-4 py-5 sm:px-6">
+      <div className="px-4 py-5 sm:px-6 flex-grow flex flex-col">
         <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
           {project.title}
         </h3>
-        <p className="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-300">
+        <div className={`mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-300 ${isExpanded ? '' : 'line-clamp-3'}`}>
           {project.description}
-        </p>
+        </div>
+        {project.description.length > 150 && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm mt-2"
+          >
+            {isExpanded ? 'Read less' : 'Read more'}
+          </button>
+        )}
       </div>
-      <div className="border-t border-gray-200 dark:border-gray-600 px-4 py-5 sm:p-0">
+      <div className="border-t border-gray-200 dark:border-gray-600 px-4 py-5 sm:p-0 mt-auto">
         <dl className="sm:divide-y sm:divide-gray-200 dark:divide-gray-600">
           <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt className="text-sm font-medium text-gray-500 dark:text-gray-300">

@@ -1,17 +1,13 @@
 [
   {
     "id": 1,
-    "title": "Music Therapy Web App",
-    "description": "A web-based music therapy application that integrates Spotify Web Playback SDK to provide mood-based music recommendations.",
+    "title": "FitTrackerPro",
+    "description": "A comprehensive fitness tracking web application that helps users monitor their health metrics. This tool features a BMI (Body Mass Index) calculator and a daily calorie needs estimator. Users can input their weight, height, age, and gender to receive personalized health insights. The clean, user-friendly interface makes it easy for individuals to track their fitness progress and set informed health goals.",
     "techStack": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Spotify API"
+      "React"
     ],
-    "link": "https://example.com/music-therapy-app",
-    "imageUrl": "/images/image.png",
-    "category": "web2"
+    "link": "https://fittrackerpro.vercel.app/",
+    "imageUrl": "/images/tracker.png"
   },
   {
     "id": 2,
@@ -26,20 +22,18 @@
       "OpenAI API"
     ],
     "link": "https://website-summarizer-9915f409eeb3.herokuapp.com/",
-    "imageUrl": "/images/summarizer.png",
-    "category": "web2"
+    "imageUrl": "/images/summarizer.png"
   },
   {
     "id": 3,
     "title": "Blockchain Farm",
-    "description": "A decentralized application (DApp) that lets user farm X tokens and earn.",
+    "description": "A decentralized application (DApp) that lets user farm X tokens and earn X tokens.",
     "techStack": [
       "Solidity",
       "Web3.js",
       "Next"
     ],
     "link": "https://v2testfarmbsc.netlify.app/",
-    "imageUrl": "/images/farm.png",
-    "category": "web3"
+    "imageUrl": "/images/farm.png"
   }
 ]
