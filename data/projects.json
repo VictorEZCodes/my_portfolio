@@ -31,7 +31,7 @@
     "techStack": [
       "Solidity",
       "Web3.js",
-      "Next"
+      "Next.js"
     ],
     "link": "https://v2testfarmbsc.netlify.app/",
     "imageUrl": "/images/farm.png"
@@ -54,7 +54,7 @@
     "description": "A pioneering decentralized platform revolutionizing the buying and selling of Web3/Web2 businesses. This innovative marketplace leverages blockchain technology to create a transparent, secure, and efficient environment for digital asset acquisitions.",
     "techStack": [
       "MongoDB",
-      "Next",
+      "Next.js",
       "Web3.js",
       "Solidity",
       "Express",
@@ -82,5 +82,17 @@
     ],
     "link": "https://voice-controlled-ai-web-app-40359552662b.herokuapp.com/",
     "imageUrl": "/images/voice_web_app.png"
+  },
+  {
+    "id": 7,
+    "title": "OptiPic",
+    "description": "OptiPic is a powerful, user-friendly web application designed for efficient bulk image compression. This tool allows users to optimize multiple images simultaneously, significantly reducing file sizes while maintaining image quality. Perfect for photographers, web developers, and content creators who need to manage and optimize large image libraries quickly and easily.",
+    "techStack": [
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js"
+    ],
+    "link": "https://voice-controlled-ai-web-app-40359552662b.herokuapp.com/",
+    "imageUrl": "/images/optipic.png"
   }
 ]
