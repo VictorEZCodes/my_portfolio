@@ -94,5 +94,17 @@
     ],
     "link": "https://optipic.vercel.app/",
     "imageUrl": "/images/optipic.png"
+  },
+  {
+    "id": 8,
+    "title": "Split The Bill",
+    "description": "SplitTheBill is a web application designed to simplify the process of splitting bills among friends, roommates, or colleagues. It offers an intuitive interface for managing shared expenses with percentage-based splitting capabilities.",
+    "techStack": [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "link": "https://thebillsplitterweb.netlify.app",
+    "imageUrl": "/images/bill.png"
   }
 ]
