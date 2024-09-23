@@ -106,5 +106,18 @@
     ],
     "link": "https://thebillsplitterweb.netlify.app",
     "imageUrl": "/images/bill.png"
+  },
+  {
+    "id": 9,
+    "title": "BouncerLink",
+    "description": "BouncerLink is a sophisticated URL shortening service offering advanced link management features such as link expiration, access control via password or email, click limiting, analytics dashboard for tracking performance, email notifications, and the ability to create custom short URLs for personalized sharing.""techStack": [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "PostgreSQL with Prisma ORM",
+      "NextAuth.js"
+    ],
+    "link": "https://bouncerlink.netlify.app/",
+    "imageUrl": "/images/bouncerlink.png"
   }
 ]
