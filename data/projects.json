@@ -120,5 +120,19 @@
     ],
     "link": "https://bouncerlink.netlify.app/",
     "imageUrl": "/images/bouncerlink.png"
+  },
+  {
+    "id": 10,
+    "title": "ProCompress",
+    "description": "ProCompress is a cutting-edge image compression tool designed to optimize image sizes, enhance website performance, and reduce bandwidth usage. This innovative web application leverages the latest compression algorithms and user-friendly interfaces to deliver fast, efficient image optimization solutions.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "MongoDB",
+      "Google OAuth",
+      "Node.js"
+    ],
+    "link": "https://procompress.xyz/",
+    "imageUrl": "/images/procompress.png"
   }
 ]
