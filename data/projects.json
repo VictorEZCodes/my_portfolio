@@ -134,5 +134,19 @@
     ],
     "link": "https://procompress.xyz/",
     "imageUrl": "/images/procompress.png"
+  },
+  {
+    "id": 11,
+    "title": "FashionHub",
+    "description": "This project is a full-stack e-commerce platform for a clothing shop. It features a React-based frontend and a Node.js/Express backend, with MongoDB as the database. The application allows users to browse products, add items to their cart, place orders, and includes an admin panel for managing products and orders.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "MongoDB",
+      "Framer Motion",
+      "Node.js"
+    ],
+    "link": "https://ecommclothingshop.netlify.app",
+    "imageUrl": "/images/fashionhub.png"
   }
 ]
