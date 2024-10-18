@@ -148,5 +148,22 @@
     ],
     "link": "https://ecommclothingshop.netlify.app",
     "imageUrl": "/images/fashionhub.png"
+  },
+  {
+    "id": 12,
+    "title": "SmartFitPlan",
+    "description": "SmartFitPlan is a Next.js-based web application that leverages artificial intelligence to create personalized workout plans and provide nutrition advice tailored to your fitness goals.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "MongoDB",
+      "Framer Motion",
+      "Next.js",
+      "Clerk",
+      "MongoDB",
+      "RapidAPI"
+    ],
+    "link": "https://smartfitplan.xyz/",
+    "imageUrl": "/images/smartfitplan.png"
   }
 ]
