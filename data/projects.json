@@ -165,5 +165,19 @@
     ],
     "link": "https://smartfitplan.xyz/",
     "imageUrl": "/images/smartfitplan.png"
+  },
+  {
+    "id": 13,
+    "title": "Mood Tracker Application",
+    "description": "The Mood Tracker is a web application designed to help users log and visualize their daily moods. Users can select from a set of predefined mood emojis or add custom emojis to represent their feelings. The application allows users to add notes to their mood entries, view a history of their moods, and visualize mood trends over time using a chart. Additionally, users can export their mood data as a JSON file for personal records. The application supports both light and dark themes for a personalized user experience.",
+    "techStack": [
+      "HTML",
+      "JavaScript",
+      "Chart.js",
+      "LocalStorage",
+      "ES6 Modules"
+    ],
+    "link": "https://trackmoods.netlify.app/",
+    "imageUrl": "/images/mood_tracker.png"
   }
 ]
