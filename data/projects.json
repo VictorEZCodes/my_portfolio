@@ -168,7 +168,7 @@
   },
   {
     "id": 13,
-    "title": "Mood Tracker Application",
+    "title": "Mood Tracker Application V1",
     "description": "The Mood Tracker is a web application designed to help users log and visualize their daily moods. Users can select from a set of predefined mood emojis or add custom emojis to represent their feelings. The application allows users to add notes to their mood entries, view a history of their moods, and visualize mood trends over time using a chart. Additionally, users can export their mood data as a JSON file for personal records. The application supports both light and dark themes for a personalized user experience.",
     "techStack": [
       "HTML",
@@ -179,5 +179,20 @@
     ],
     "link": "https://trackmoods.netlify.app/",
     "imageUrl": "/images/mood_tracker.png"
+  },
+  {
+    "id": 13,
+    "title": "Mood Tracker Application V2",
+    "description": "An advanced mood tracking web application that helps users monitor their emotional well-being with AI-powered insights. The app features a clean, responsive interface for logging daily moods using emojis, along with journal entries and tags. Key features include personalized AI emotional support, detailed mood analytics showing patterns and trends, tag-based mood correlation insights, and an interactive chart displaying mood history. The application prioritizes user privacy by storing all data locally, while offering a sophisticated dark/light theme system and mobile-first design.",
+    "techStack": [
+      "JavaScript (ES6+)",
+      "Chart.js",
+      "OpenAI API",
+      "Tailwind CSS",
+      "LocalStorage",
+      "HTML5"
+    ],
+    "link": "https://advancedmoodtracker.netlify.app/",
+    "imageUrl": "/images/mood_tracker_2.png"
   }
 ]
