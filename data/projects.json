@@ -181,7 +181,7 @@
     "imageUrl": "/images/mood_tracker.png"
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "Mood Tracker Application V2",
     "description": "An advanced mood tracking web application that helps users monitor their emotional well-being with AI-powered insights. The app features a clean, responsive interface for logging daily moods using emojis, along with journal entries and tags. Key features include personalized AI emotional support, detailed mood analytics showing patterns and trends, tag-based mood correlation insights, and an interactive chart displaying mood history. The application prioritizes user privacy by storing all data locally, while offering a sophisticated dark/light theme system and mobile-first design.",
     "techStack": [
@@ -194,5 +194,19 @@
     ],
     "link": "https://advancedmoodtracker.netlify.app/",
     "imageUrl": "/images/mood_tracker_2.png"
+  },
+  {
+    "id": 15,
+    "title": "Code Documentation Assistant",
+    "description": "A powerful web application that automates the creation of comprehensive documentation for GitHub repositories. Built with GPT-4 Turbo, this tool analyzes repository content and generates detailed README files with API references, changelogs, and implementation details. Features include dark/light theme support, real-time markdown preview, intelligent repository scanning, and a user-friendly interface for seamless documentation generation. Perfect for developers looking to maintain high-quality documentation with minimal effort.",
+    "techStack": [
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "OpenAI API",
+      "GitHub API"
+    ],
+    "link": "https://documentationassistant.netlify.app/",
+    "imageUrl": "/images/code_doc_assistant.png"
   }
 ]
