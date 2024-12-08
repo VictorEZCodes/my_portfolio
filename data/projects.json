@@ -198,7 +198,7 @@
   {
     "id": 15,
     "title": "Code Documentation Assistant",
-    "description": "A powerful web application that automates the creation of comprehensive documentation for GitHub repositories. Built with GPT-4 Turbo, this tool analyzes repository content and generates detailed README files with API references, changelogs, and implementation details. Features include dark/light theme support, real-time markdown preview, intelligent repository scanning, and a user-friendly interface for seamless documentation generation. Perfect for developers looking to maintain high-quality documentation with minimal effort.",
+    "description": "A powerful web application that automates the creation of comprehensive documentation for GitHub repositories. Built with GPT-4 Turbo, this tool analyzes repository content and generates detailed README files with API references, changelogs, and implementation details. Features include a real-time markdown preview, intelligent repository scanning, and a user-friendly interface for seamless documentation generation. Perfect for developers looking to maintain high-quality documentation with minimal effort.",
     "techStack": [
       "JavaScript",
       "Vite",
@@ -208,5 +208,18 @@
     ],
     "link": "https://documentationassistant.netlify.app/",
     "imageUrl": "/images/code_doc_assistant.png"
+  },
+  {
+    "id": 16,
+    "title": "Open-Source API Tester",
+    "description": "A lightweight, browser-based API testing tool for developers to test and organize API requests efficiently without the complexity of traditional tools.",
+    "techStack": [
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "HTML5"
+    ],
+    "link": "https://openapitester.netlify.app/",
+    "imageUrl": "/images/api_tester.png"
   }
 ]
