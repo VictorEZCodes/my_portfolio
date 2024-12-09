@@ -221,5 +221,19 @@
     ],
     "link": "https://openapitester.netlify.app/",
     "imageUrl": "/images/api_tester.png"
+  },
+  {
+    "id": 17,
+    "title": "Dev Tools Aggregator",
+    "description": "A comprehensive web-based developer toolkit that combines essential development utilities in one interface. Features include JSON formatter, Base64 encoder/decoder, URL encoder/decoder, Regex tester, Hash generator, UUID generator, Timestamp converter, Markdown previewer, Color converter, JWT decoder, HTTP request tester, CSS minifier, and JSON to CSV converter. Built with a clean, responsive interface and dark mode support, this tool streamlines developer workflows by providing quick access to commonly needed utilities.",
+    "techStack": [
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "Feather Icons",
+      "Marked.js"
+    ],
+    "link": "https://toolsaggregator.netlify.app/",
+    "imageUrl": "/images/aggregator.png"
   }
 ]
