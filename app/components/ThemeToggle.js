@@ -24,12 +24,13 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 
+    transition-all duration-300 hover:scale-110 hover:rotate-12"
     >
       {darkMode ? (
-        <SunIcon className="h-6 w-6" />
+        <SunIcon className="h-6 w-6 animate-spin-slow" />
       ) : (
-        <MoonIcon className="h-6 w-6" />
+        <MoonIcon className="h-6 w-6 animate-bounce-slow" />
       )}
     </button>
   )

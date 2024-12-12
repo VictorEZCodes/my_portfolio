@@ -6,8 +6,18 @@ import { useState } from 'react'
 export default function ProjectCard({ project }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
+  const handleCardClick = () => {
+    if (project.link) {
+      window.open(project.link, '_blank', 'noopener noreferrer')
+    }
+  }
+
   return (
-    <div className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg flex flex-col h-full">
+    <div
+      onClick={handleCardClick}
+      className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg flex flex-col h-full
+      transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+    >
       {project.imageUrl && (
         <div className="w-full h-48 relative overflow-hidden">
           <Image
@@ -15,6 +25,7 @@ export default function ProjectCard({ project }) {
             alt={project.title}
             fill
             style={{ objectFit: "cover" }}
+            className="transition-transform duration-300"
           />
         </div>
       )}
@@ -27,7 +38,10 @@ export default function ProjectCard({ project }) {
         </div>
         {project.description.length > 150 && (
           <button
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsExpanded(!isExpanded);
+            }}
             className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm mt-2"
           >
             {isExpanded ? 'Read less' : 'Read more'}
@@ -50,7 +64,13 @@ export default function ProjectCard({ project }) {
                 Link
               </dt>
               <dd className="mt-1 text-sm text-gray-900 dark:text-white sm:mt-0 sm:col-span-2">
-                <a href={project.link} className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.link}
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   View Project
                 </a>
               </dd>
