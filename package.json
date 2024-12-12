@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/runtime": "^7.26.0",
     "@heroicons/react": "^2.1.5",
     "@radix-ui/react-slot": "^1.1.0",
     "@tailwindcss/line-clamp": "^0.4.4",
@@ -20,10 +21,13 @@
     "next": "^14.2.9",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.4.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.x.x",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.10",
     "postcss": "^8.4.45",
