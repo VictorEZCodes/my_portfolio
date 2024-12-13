@@ -62,7 +62,7 @@ export default function Home() {
 
           {/* LinkedIn Link */}
           <motion.a
-            href="https://www.linkedin.com/in/ifunanyaezeanyika"
+            href="https://www.linkedin.com/in/victorezeanyika"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-600 transition-colors"
@@ -70,6 +70,18 @@ export default function Home() {
             whileTap={{ scale: 0.9 }}
           >
             <FaLinkedin size={24} />
+          </motion.a>
+
+          {/* GitHub Link */}
+          <motion.a
+            href="https://github.com/VictorEZCodes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            whileHover={{ scale: 1.2, rotate: 10 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaGithub size={24} />
           </motion.a>
         </motion.div>
       </motion.div>

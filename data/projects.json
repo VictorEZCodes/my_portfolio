@@ -235,5 +235,17 @@
     ],
     "link": "https://toolsaggregator.netlify.app/",
     "imageUrl": "/images/aggregator.png"
+  },
+  {
+    "id": 18,
+    "title": "Insight Flow Analytics",
+    "description": "A lightweight analytics dashboard that provides users with essential, real-time web traffic insights.",
+    "techStack": [
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS"
+    ],
+    "link": "https://insightflowanalytics.netlify.app/",
+    "imageUrl": "/images/insightflow.png"
   }
 ]
