@@ -62,7 +62,7 @@ export default function Home() {
 
           {/* LinkedIn Link */}
           <motion.a
-            href="https://www.linkedin.com/in/ifunanyaezeanyika"
+            href="https://www.linkedin.com/in/victorezeanyika"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-600 transition-colors"
