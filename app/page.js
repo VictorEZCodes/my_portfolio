@@ -2,7 +2,7 @@
 
 import ProjectsList from './components/ProjectsList'
 import projects from '../data/projects.json'
-import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
+import { FaWhatsapp, FaLinkedin, FaGithub, FaXTwitter } from 'react-icons/fa6'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -82,6 +82,18 @@ export default function Home() {
             whileTap={{ scale: 0.9 }}
           >
             <FaGithub size={24} />
+          </motion.a>
+
+          {/* X Link */}
+          <motion.a
+            href="https://x.com/victorezeanyika"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            whileHover={{ scale: 1.2, rotate: -10 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaXTwitter size={22} />
           </motion.a>
         </motion.div>
       </motion.div>

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@babel/runtime": "^7.26.0",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-react": "^7.x.x",
+    "@netlify/plugin-nextjs": "^5.9.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.10",
     "postcss": "^8.4.45",
