@@ -247,5 +247,17 @@
     ],
     "link": "https://insightflowanalytics.netlify.app/",
     "imageUrl": "/images/insightflow.png"
+  },
+  {
+    "id": 19,
+    "title": "WhisperBox",
+    "description": "A simple SaaS that helps startups, indie hackers, and small businesses gather user feedback quickly and effortlessly. Embed a small widget on your site/app, view all feedback in a centralized dashboard, and iterate based on real user insights.",
+    "techStack": [
+      "Next.js",
+      "Railway",
+      "Tailwind CSS"
+    ],
+    "link": "https://whisperboxfeed.netlify.app/",
+    "imageUrl": "/images/whisperbox.png"
   }
 ]
