@@ -257,7 +257,7 @@
       "Railway",
       "Tailwind CSS"
     ],
-    "link": "https://whisperboxfeed.netlify.app/",
+    "link": "https://whisperbox.tech/",
     "imageUrl": "/images/whisperbox.png"
   },
   {
@@ -272,5 +272,41 @@
     ],
     "link": "https://argwinner.netlify.app/",
     "imageUrl": "/images/argument_winner.png"
+  },
+  {
+    "id": 21,
+    "title": "Discord-Whatsapp Bridge",
+    "description": "A Node.js bot that forwards messages from Discord channels to WhatsApp. Messages from specified Discord channels are automatically forwarded to a designated WhatsApp number with preserved formatting and sender information.",
+    "techStack": [
+      "Node.js",
+      "Discord.js",
+      "Whatsapp-web.js"
+    ],
+    "link": "https://github.com/VictorEZCodes/discord-whatsapp-bridge/",
+    "imageUrl": "/images/discord-whatsapp-bridge.png"
+  },
+  {
+    "id": 22,
+    "title": "Tab Mood Tracker Extension",
+    "description": "Tracks your mood based on websites you visit.",
+    "techStack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://github.com/VictorEZCodes/tab-mood-tracker-extension/",
+    "imageUrl": "/images/tab-mood-tracker.png"
+  },
+  {
+    "id": 23,
+    "title": "Personal Finance Tracker",
+    "description": "A modern web application built with Next.js and React that helps users manage their personal finances. Track income, expenses, and monitor spending patterns with interactive visualizations.",
+    "techStack": [
+      "Next.js",
+      "React Context API",
+      "Tailwind CSS"
+    ],
+    "link": "https://personalfinancedemotracker.netlify.app/",
+    "imageUrl": "/images/personal-finance-tracker.png"
   }
 ]

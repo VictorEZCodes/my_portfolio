@@ -86,7 +86,7 @@ export default function Home() {
 
           {/* X Link */}
           <motion.a
-            href="https://x.com/victorezeanyika"
+            href="https://x.com/victoranyika_"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
