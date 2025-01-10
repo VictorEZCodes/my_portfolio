@@ -32,8 +32,8 @@ export default function ProjectsList({ projects }) {
   const getAnimationVariants = (index) => ({
     initial: {
       opacity: 0,
-      y: scrollDirection === "down" ? 50 : -50,
-      scale: 0.9
+      y: scrollDirection === "down" ? 20 : -20, 
+      scale: 0.95 
     },
     animate: {
       opacity: 1,
@@ -51,14 +51,14 @@ export default function ProjectsList({ projects }) {
           initial="initial"
           whileInView="animate"
           viewport={{
-            once: false,
-            margin: "-100px",
-            amount: 0.4
+            once: true,
+            margin: "0px",
+            amount: 0.3 
           }}
           transition={{
-            duration: 0.6,
-            delay: index * 0.1,
-            ease: [0.21, 1.11, 0.81, 0.99],
+            duration: 0.4,
+            delay: Math.min(index * 0.05, 0.3), 
+            ease: "easeOut" 
           }}
         >
           <div className="h-full">
