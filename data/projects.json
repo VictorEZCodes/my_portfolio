@@ -308,5 +308,41 @@
     ],
     "link": "https://personalfinancedemotracker.netlify.app/",
     "imageUrl": "/images/personal-finance-tracker.png"
+  },
+  {
+    "id": 24,
+    "title": "Smart CodeGen",
+    "description": "A robust, AI-powered CLI tool for efficient React development. Generate React components, custom hooks, and CRUD operations with TypeScript support and industry best practices baked in.",
+    "techStack": [
+      "JavaScript",
+      "OpenAI API",
+      "Node.js"
+    ],
+    "link": "https://www.npmjs.com/package/smart-codegen-cli/",
+    "imageUrl": "/images/codegen.png"
+  },
+  {
+    "id": 25,
+    "title": "AI Agent NBA Props Analyzer",
+    "description": "NBA Props Analyzer is a tool designed to analyze player props for upcoming NBA games. It leverages various data sources to provide insights and recommendations on player performance metrics.",
+    "techStack": [
+      "JavaScript",
+      "OpenAI API",
+      "RapidAPI",
+      "Node.js"
+    ],
+    "link": "https://github.com/VictorEZCodes/ai-agent-nba-props-analyzer/",
+    "imageUrl": "/images/nba.png"
+  },
+  {
+    "id": 26,
+    "title": "Time Capsule",
+    "description": "A simple website that counts down to 2025, showing you exactly how long you'll have to wait to see what happens! 🎯",
+    "techStack": [
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "link": "https://maketimecapsule.netlify.app/",
+    "imageUrl": "/images/capsule.png"
   }
 ]

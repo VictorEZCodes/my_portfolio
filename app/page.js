@@ -1,15 +1,21 @@
 'use client'
 
 import ProjectsList from './components/ProjectsList'
+import ExperiencesList from './components/ExperienceList'
 import projects from '../data/projects.json'
+import experiences from '../data/experiences.json'
 import { FaWhatsapp, FaLinkedin, FaGithub, FaXTwitter } from 'react-icons/fa6'
 import { motion } from 'framer-motion'
+import SocialLinks from './components/SocialLinks'
 
 export default function Home() {
+  const previewExperiences = experiences.slice(0, 2)
+  const previewProjects = projects.slice(0, 3)
+
   return (
     <>
       <motion.div
-        className="mb-8"
+        className="mb-16"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -98,7 +104,61 @@ export default function Home() {
         </motion.div>
       </motion.div>
 
-      <ProjectsList projects={projects} />
+      {/* Experience Section */}
+      <motion.section
+        className="mb-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <div className="flex justify-between items-center mb-8">
+          <motion.h2
+            className="text-2xl font-bold dark:text-white text-gray-900"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            Experience
+          </motion.h2>
+          <motion.a
+            href="/experience"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm font-medium"
+            whileHover={{ x: 5 }}
+          >
+            View All →
+          </motion.a>
+        </div>
+        <ExperiencesList experiences={previewExperiences} />
+      </motion.section>
+
+      {/* Projects Section */}
+      <motion.section
+        className="mb-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <div className="flex justify-between items-center mb-8">
+          <motion.h2
+            className="text-2xl font-bold dark:text-white text-gray-900"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            Projects
+          </motion.h2>
+          <motion.a
+            href="/projects"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm font-medium"
+            whileHover={{ x: 5 }}
+          >
+            View All →
+          </motion.a>
+        </div>
+        <ProjectsList projects={previewProjects} />
+      </motion.section>
+
+      <SocialLinks />
     </>
   )
 }
