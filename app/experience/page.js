@@ -4,9 +4,11 @@ import ExperiencesList from '../components/ExperienceList'
 import experiences from '../../data/experiences.json'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import SocialLinks from '../components/SocialLinks'
 
 export default function ExperiencePage() {
   return (
+    <>
     <div className="max-w-7xl mx-auto px-4 py-8">
       <motion.div 
         className="mb-8"
@@ -25,5 +27,8 @@ export default function ExperiencePage() {
       </motion.div>
       <ExperiencesList experiences={experiences} />
     </div>
+
+    <SocialLinks />
+    </>
   )
 }
