@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import ProjectsList from './components/ProjectsList'
 import ExperiencesList from './components/ExperienceList'
 import projects from '../data/projects.json'
@@ -7,35 +8,60 @@ import experiences from '../data/experiences.json'
 import { FaWhatsapp, FaLinkedin, FaGithub, FaXTwitter } from 'react-icons/fa6'
 import { motion } from 'framer-motion'
 import SocialLinks from './components/SocialLinks'
+import Image from 'next/image'
+import TypeWriter from './components/TypeWriter'
 
 export default function Home() {
   const previewExperiences = experiences.slice(0, 2)
-  const previewProjects = projects.slice(0, 3)
+  const [previewProjects, setPreviewProjects] = useState([])
+
+  useEffect(() => {
+    // Get 3 random projects everytime the page is loaded
+    setPreviewProjects([...projects].sort(() => Math.random() - 0.5).slice(0, 3))
+  }, [])
 
   return (
     <>
-      <motion.div
-        className="mb-16"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <motion.h1
-          className="text-3xl font-bold mb-6 dark:text-white text-gray-900"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          Victor Ezeanyika
-        </motion.h1>
-        <motion.p
-          className="mb-6 dark:text-gray-300 text-gray-700"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          FullStack Developer
-        </motion.p>
+      <motion.div className="mb-16" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+        <div className="flex items-center gap-6 mb-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
+              delay: 0.1
+            }}
+          >
+            <Image
+              src="/images/profile.png"
+              alt="Victor Ezeanyika"
+              width={80}
+              height={80}
+              className="rounded-full border-2 border-gray-200 dark:border-gray-700 shadow-lg"
+              priority
+            />
+          </motion.div>
+          <div>
+            <motion.h1
+              className="text-3xl font-bold mb-2 dark:text-white text-gray-900"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <TypeWriter text="Victor Ezeanyika" speed={50} />
+            </motion.h1>
+            <motion.p
+              className="dark:text-gray-300 text-gray-700"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <TypeWriter text="FullStack Developer" speed={70} delay={500} />
+            </motion.p>
+          </div>
+        </div>
 
         <motion.div
           className="flex items-center gap-4"

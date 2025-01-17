@@ -1,8 +1,14 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 import ThemeToggle from './components/ThemeToggle'
+import CommandPalette from './components/CommandPalette'
+import ShortcutIndicator from './components/ShortcutIndicator'
+import CustomCursor from './components/CustomCursor'
 
-const inter = Inter({ subsets: ['latin'] })
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+})
 
 export const metadata = {
   title: 'Victor Ezeanyika - Portfolio',
@@ -11,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={spaceGrotesk.className}>
       <head>
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -38,7 +44,10 @@ export default function RootLayout({ children }) {
           `
         }} />
       </head>
-      <body>
+      <body className="min-h-screen bg-gray-50 dark:bg-[#121212] transition-colors duration-300">
+      <CommandPalette />
+      <ShortcutIndicator />
+      <CustomCursor />
         <script dangerouslySetInnerHTML={{
           __html: `
             (function() {
@@ -55,9 +64,9 @@ export default function RootLayout({ children }) {
             })()
           `
         }} />
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-6 flex flex-col justify-center sm:py-12">
+        <div className="min-h-screen bg-white dark:bg-[#121212] py-6 flex flex-col justify-center sm:py-12">
           <main className="relative py-3 sm:max-w-6xl sm:mx-auto">
-            <div className="relative px-4 py-10 bg-white dark:bg-gray-800 shadow-lg sm:rounded-3xl sm:p-20">
+            <div className="relative px-4 py-10 bg-white dark:bg-[#1E1E1E] shadow-lg sm:rounded-3xl sm:p-20 transition-colors duration-300">
               <div className="absolute top-4 right-4">
                 <ThemeToggle />
               </div>

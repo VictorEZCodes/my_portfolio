@@ -13,7 +13,7 @@ export default function SocialLinks() {
 
   return (
     <motion.div 
-      className="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 py-3 px-4 z-50"
+      className="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-[#121212]/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 py-3 px-4 z-50"
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, delay: 1 }}
