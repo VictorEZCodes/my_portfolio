@@ -1,22 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
 
-export default function ProjectCard({ project }) {
-  const [isExpanded, setIsExpanded] = useState(false)
-
-  const handleCardClick = () => {
-    if (project.link) {
-      window.open(project.link, '_blank', 'noopener noreferrer')
-    }
-  }
-
+export default function ProjectCard({ project, isExpanded, onExpand }) {
   return (
     <div
-      onClick={handleCardClick}
       className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg flex flex-col h-full
-      transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+      transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
     >
       {project.imageUrl && (
         <div className="w-full h-48 relative overflow-hidden">
@@ -40,7 +30,7 @@ export default function ProjectCard({ project }) {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setIsExpanded(!isExpanded);
+              onExpand();
             }}
             className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm mt-2"
           >
@@ -69,7 +59,6 @@ export default function ProjectCard({ project }) {
                   className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
                 >
                   View Project
                 </a>

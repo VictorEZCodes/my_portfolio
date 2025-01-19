@@ -3,9 +3,11 @@
 import ProjectCard from './ProjectCard'
 import { motion } from 'framer-motion'
 import { useScrollDirection } from '../hooks/useScrollDirection'
+import { useState } from 'react'
 
 export default function ProjectsList({ projects }) {
   const scrollDirection = useScrollDirection()
+  const [expandedStates, setExpandedStates] = useState({})
 
   const getAnimationVariants = (index) => ({
     initial: {
@@ -19,6 +21,18 @@ export default function ProjectsList({ projects }) {
       scale: 1
     }
   })
+
+  const handleExpand = (id) => {
+    setExpandedStates(prev => {
+      if (prev[id]) {
+        const newStates = { ...prev }
+        delete newStates[id]
+        return newStates
+      }
+      
+      return { [id]: true }
+    })
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -40,7 +54,11 @@ export default function ProjectsList({ projects }) {
           }}
         >
           <div className="h-full">
-            <ProjectCard project={project} />
+            <ProjectCard 
+              project={project} 
+              isExpanded={!!expandedStates[project.id]}
+              onExpand={() => handleExpand(project.id)}
+            />
           </div>
         </motion.div>
       ))}

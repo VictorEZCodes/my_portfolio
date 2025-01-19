@@ -337,7 +337,7 @@
   {
     "id": 26,
     "title": "Time Capsule",
-    "description": "A simple website that counts down to 2025, showing you exactly how long you'll have to wait to see what happens! 🎯",
+    "description": "A sleek and interactive website designed to count down the days, hours, minutes, and seconds to the arrival of 2025. It offers a visually engaging experience, complete with dynamic updates, ensuring users stay captivated as they anticipate the future. Whether you're curious about the time left until the new year or simply enjoy tracking moments, this countdown website keeps you informed and excited every step of the way!",
     "techStack": [
       "Next.js",
       "Tailwind CSS"

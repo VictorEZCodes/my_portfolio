@@ -1,11 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
 
-export default function ExperienceCard({ experience }) {
-  const [isExpanded, setIsExpanded] = useState(false)
-
+export default function ExperienceCard({ experience, isExpanded, onExpand }) {
   return (
     <div className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg flex flex-col h-full
       transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
@@ -35,7 +32,7 @@ export default function ExperienceCard({ experience }) {
       </div>
       
       <div className="px-4 py-5 sm:px-6 flex-grow">
-        <div className={`space-y-2 ${!isExpanded && 'max-h-[100px] overflow-hidden relative'}`}>
+        <div className={`space-y-2 transition-all duration-300 ${isExpanded ? 'max-h-[1000px]' : 'max-h-[100px]'} overflow-hidden relative`}>
           {!isExpanded && (
             <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white dark:from-gray-700 to-transparent" />
           )}
@@ -48,8 +45,12 @@ export default function ExperienceCard({ experience }) {
           </ul>
         </div>
         <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-4 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onExpand();
+          }}
+          className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm mt-2 focus:outline-none"
         >
           {isExpanded ? 'Show Less' : 'Read More'}
         </button>

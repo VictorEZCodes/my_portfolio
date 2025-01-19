@@ -4,12 +4,28 @@
     "title": "Freelancer",
     "company": "Upwork",
     "location": "Lagos, Nigeria",
-    "duration": "October 2024 - Present",
+    "duration": "April 2024 - Present",
     "description": [
       "Provided technical consulting and project management services, ensuring timely delivery and client satisfaction.",
       "Developed custom web applications for clients using React, Node.js, and MongoDB."
     ],
-    "techStack": ["React.js", "Next.js", "Node.js", "JavaScript", "Solidity"],
+    "techStack": ["React.js", "Next.js", "Node.js", "JavaScript", "Solidity", "MongoDB", "TailwindCSS", "Railway"],
     "imageUrl": "/images/upwork.png"
+  },
+  {
+    "id": 2,
+    "title": "Owner",
+    "company": "NexTech Nomad",
+    "location": "Lagos, Nigeria",
+    "duration": "April 2024 - Present",
+    "description": [
+      "Founded and managed a tech agency specializing in innovative web and blockchain solutions, leading a dynamic team of developers to deliver cutting-edge projects.",
+      "Collaborated with clients to understand their business needs and translated them into scalable, user-focused digital products.",
+      "Provided end-to-end technical consulting, including architecture design, development, and deployment, ensuring optimal performance and client satisfaction.",
+      "Designed and built custom web applications and decentralized solutions utilizing React, Node.js, and Solidity.",
+      "Implemented best practices in agile development, ensuring timely delivery and maintaining a high standard of quality across all projects."
+    ],
+    "techStack": ["React.js", "Next.js", "Node.js", "JavaScript", "Solidity", "MongoDB", "TailwindCSS", "Railway"],
+    "imageUrl": "/images/nextechnomad.png"
   }
 ]

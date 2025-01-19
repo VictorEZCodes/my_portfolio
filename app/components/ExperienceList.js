@@ -3,9 +3,11 @@
 import ExperienceCard from './ExperienceCard'
 import { motion } from 'framer-motion'
 import { useScrollDirection } from '../hooks/useScrollDirection'
+import { useState } from 'react'
 
 export default function ExperiencesList({ experiences }) {
   const scrollDirection = useScrollDirection()
+  const [expandedId, setExpandedId] = useState(null)
 
   const getAnimationVariants = (index) => ({
     initial: {
@@ -20,11 +22,16 @@ export default function ExperiencesList({ experiences }) {
     }
   })
 
+  const handleExpand = (id) => {
+    setExpandedId(prevId => prevId === id ? null : id)
+  }
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto items-start">
       {experiences.map((experience, index) => (
         <motion.div
           key={experience.id}
+          className="h-fit"
           variants={getAnimationVariants(index)}
           initial="initial"
           whileInView="animate"
@@ -39,7 +46,11 @@ export default function ExperiencesList({ experiences }) {
             ease: "easeOut"
           }}
         >
-          <ExperienceCard experience={experience} />
+          <ExperienceCard 
+            experience={experience} 
+            isExpanded={expandedId === experience.id}
+            onExpand={() => handleExpand(experience.id)}
+          />
         </motion.div>
       ))}
     </div>
