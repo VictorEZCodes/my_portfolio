@@ -344,5 +344,43 @@
     ],
     "link": "https://maketimecapsule.netlify.app/",
     "imageUrl": "/images/capsule.png"
+  },
+  {
+    "id": 27,
+    "title": "Contently",
+    "description": "Contently is a platform that allows users to convert website content into clean, structured Markdown format. It is designed for developers, researchers, content creators, and AI enthusiasts who need efficient and automated solutions for managing, repurposing, and archiving web content.",
+    "techStack": [
+      "Vite",
+      "Tailwind CSS"
+    ],
+    "link": "https://contentlyai.netlify.app/",
+    "imageUrl": "/images/contently.png"
+  },
+  {
+    "id": 28,
+    "title": "Deepseek AI API Chat Interface",
+    "description": "A modern, responsive web application for interacting with DeepSeek's AI models. Built with vanilla JavaScript and Tailwind CSS.",
+    "techStack": [
+      "Vite",
+      "Tailwind CSS",
+      "LocalStorage"
+    ],
+    "link": "https://deepseekui.netlify.app/",
+    "imageUrl": "/images/deepseek.png"
+  },
+  {
+    "id": 29,
+    "title": "FinanceAI",
+    "description": "A modern financial market analysis platform combining real-time market data with AI-powered insights.",
+    "techStack": [
+      "Vite",
+      "Railway",
+      "Netlify",
+      "Tailwind CSS",
+      "HuggingFace",
+      "OpenAI API"
+    ],
+    "link": "https://financeaiagent.netlify.app/",
+    "imageUrl": "/images/financeai.png"
   }
 ]
