@@ -382,5 +382,20 @@
     ],
     "link": "https://financeaiagent.netlify.app/",
     "imageUrl": "/images/financeai.png"
+  },
+  {
+    "id": 30,
+    "title": "BSCrypt Finance",
+    "description": "Boost investor confidence and community trust by securing your token with a liquidity lock. Ensure long-term stability and demonstrate your commitment to transparency and security.",
+    "techStack": [
+      "React",
+      "Web3.js",
+      "Solidity",
+      "Coingecko API",
+      "HuggingFace",
+      "OpenAI API"
+    ],
+    "link": "https://bscrypt.netlify.app/",
+    "imageUrl": "/images/bscrypt.png"
   }
 ]

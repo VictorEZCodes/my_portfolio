@@ -14,6 +14,17 @@
   },
   {
     "id": 2,
+    "title": "Junior Frontend Engineer",
+    "company": "PayOnUs",
+    "location": "Lagos, Nigeria",
+    "duration": "January 2025 - Present",
+    "description": [
+    ],
+    "techStack": ["HTML", "CSS", "JavaScript", "React.js"],
+    "imageUrl": "/images/onusFavicon.png"
+  },
+  {
+    "id": 3,
     "title": "Owner",
     "company": "NexTech Nomad",
     "location": "Lagos, Nigeria",
