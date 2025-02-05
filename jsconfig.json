@@ -3,6 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    }
-  }
+    },
+    "jsx": "preserve",
+    "checkJs": false,
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules"]
 }
