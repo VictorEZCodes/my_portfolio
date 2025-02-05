@@ -3,72 +3,73 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 export default function CustomCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [mousePosition, setMousePosition] = useState(null)
   const [isPointer, setIsPointer] = useState(false)
-  const [isVisible, setIsVisible] = useState(false) 
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const updateMousePosition = (e) => {
+    const mouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
       setIsVisible(true) // Show cursor when mouse moves
-    }
-
-    const updateCursorType = () => {
-      const hoveredElement = document.elementFromPoint(mousePosition.x, mousePosition.y)
+      
+      const hoveredElement = document.elementFromPoint(e.clientX, e.clientY)
       setIsPointer(
         window.getComputedStyle(hoveredElement || document.body).cursor === 'pointer'
       )
     }
 
-    window.addEventListener('mousemove', (e) => {
-      updateMousePosition(e)
-      updateCursorType()
-    })
+    const mouseLeave = () => setIsVisible(false)
 
-    // Hide cursor when mouse leaves the window
-    window.addEventListener('mouseout', () => setIsVisible(false))
-    window.addEventListener('mouseleave', () => setIsVisible(false))
+    window.addEventListener('mousemove', mouseMove)
+    window.addEventListener('mouseleave', mouseLeave)
 
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition)
-      window.removeEventListener('mouseout', () => setIsVisible(false))
-      window.removeEventListener('mouseleave', () => setIsVisible(false))
+      window.removeEventListener('mousemove', mouseMove)
+      window.removeEventListener('mouseleave', mouseLeave)
     }
-  }, [mousePosition.x, mousePosition.y])
+  }, [])
 
-  if (!isVisible) return null
+  if (!isVisible || !mousePosition) return null
+
+  const mainCursor = {
+    initial: { x: mousePosition.x - 8, y: mousePosition.y - 8 },
+    animate: {
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
+      scale: isPointer ? 1.5 : 1
+    }
+  }
+
+  const trailCursor = {
+    initial: { x: mousePosition.x - 16, y: mousePosition.y - 16 },
+    animate: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      scale: isPointer ? 1.2 : 1
+    }
+  }
 
   return (
     <>
-      {/* Main cursor */}
       <motion.div
         className="fixed w-4 h-4 bg-blue-500 rounded-full pointer-events-none z-[9999] mix-blend-difference"
-        animate={{
-          x: mousePosition.x - 8,
-          y: mousePosition.y - 8,
-          scale: isPointer ? 1.5 : 1,
-        }}
+        initial={mainCursor.initial}
+        animate={mainCursor.animate}
         transition={{
-          type: "spring",
-          damping: 30,
-          mass: 0.5,
-          stiffness: 400
+          type: "tween",
+          duration: 0.1,
+          ease: "linear"
         }}
       />
 
-      {/* Cursor trail */}
       <motion.div
         className="fixed w-8 h-8 border border-blue-400/50 rounded-full pointer-events-none z-[9998]"
-        animate={{
-          x: mousePosition.x - 16,
-          y: mousePosition.y - 16,
-          scale: isPointer ? 1.2 : 1,
-        }}
+        initial={trailCursor.initial}
+        animate={trailCursor.animate}
         transition={{
-          type: "spring",
-          damping: 20,
-          mass: 0.8,
-          stiffness: 300
+          type: "tween",
+          duration: 0.2,
+          ease: "linear"
         }}
       />
     </>
