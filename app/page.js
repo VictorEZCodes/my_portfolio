@@ -71,7 +71,7 @@ export default function Home() {
         >
           {/* Resume Button */}
           <motion.a
-            href="/VICTOR_EZEANYIKA_Resume.pdf"
+            href="/victorezeanyika.pdf"
             target="_blank"
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
             whileHover={{ scale: 1.05 }}
