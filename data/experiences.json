@@ -19,6 +19,12 @@
     "location": "Lagos, Nigeria",
     "duration": "January 2025 - Present",
     "description": [
+      "Developed and implemented responsive user interfaces for the authentication system, including sign-up and login pages.",
+      "Built an intuitive and responsive dashboard menu system improving overall user navigation and experience.",
+      "Engineered a comprehensive KYC document management system with features for uploading, viewing, and managing documents.",
+      "Implemented document preview functionality using react-doc-viewer, enabling users to view uploaded documents directly in the application.",
+      "Collaborated with cross-functional teams to integrate frontend components with backend APIs and ensure seamless user experience.",
+      "Contributed to sprint planning and daily stand-ups, actively participating in agile development processes."
     ],
     "techStack": ["HTML", "CSS", "JavaScript", "React.js"],
     "imageUrl": "/images/onusFavicon.png"
