@@ -21,7 +21,7 @@
       "Express",
       "OpenAI API"
     ],
-    "link": "https://website-summarizer-9915f409eeb3.herokuapp.com/",
+    "link": "https://website-summarizer-x0on.onrender.com/",
     "imageUrl": "/images/summarizer.png"
   },
   {
@@ -61,7 +61,7 @@
       "Node.js",
       "Telegram Bot"
     ],
-    "link": "https://codexchange-833198fe44cb.herokuapp.com/",
+    "link": "https://codexchange-frontend.onrender.com/",
     "imageUrl": "/images/codexchange.png"
   },
   {
@@ -80,7 +80,7 @@
       "API Ninjas",
       "Wit.ai"
     ],
-    "link": "https://voice-controlled-ai-web-app-40359552662b.herokuapp.com/",
+    "link": "https://voice-assistant-12rd.onrender.com/",
     "imageUrl": "/images/voice_web_app.png"
   },
   {
