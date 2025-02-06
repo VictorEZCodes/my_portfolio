@@ -26,7 +26,7 @@
       "Collaborated with cross-functional teams to integrate frontend components with backend APIs and ensure seamless user experience.",
       "Contributed to sprint planning and daily stand-ups, actively participating in agile development processes."
     ],
-    "techStack": ["HTML", "CSS", "JavaScript", "React.js"],
+    "techStack": ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "TailwindCSS"],
     "imageUrl": "/images/onusFavicon.png"
   },
   {
