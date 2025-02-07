@@ -5,6 +5,7 @@ import projects from '../../data/projects.json'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import SocialLinks from '../components/SocialLinks'
+import ScrollArrow from '../components/ScrollArrow'
 
 export default function ProjectsPage() {
   return (
@@ -29,6 +30,7 @@ export default function ProjectsPage() {
       </div>
 
       <SocialLinks />
+      <ScrollArrow />
     </>
   )
 }
