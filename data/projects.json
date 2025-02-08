@@ -391,11 +391,24 @@
       "React",
       "Web3.js",
       "Solidity",
-      "Coingecko API",
-      "HuggingFace",
-      "OpenAI API"
+      "Coingecko API"
     ],
     "link": "https://bscrypt.netlify.app/",
     "imageUrl": "/images/bscrypt.png"
+  },
+  {
+    "id": 31,
+    "title": "Dice Casino",
+    "description": "A decentralized gambling platform on BNB Chain (BSC) that lets users play a provably fair dice game using BNB.",
+    "techStack": [
+      "Solidity",
+      "Node.js",
+      "Ethers.js",
+      "Telegraf",
+      "OpenZeppelin",
+      "Hardhat"
+    ],
+    "link": "https://github.com/VictorEZCodes/DiceCasino",
+    "imageUrl": "/images/dicecasino.png"
   }
 ]
