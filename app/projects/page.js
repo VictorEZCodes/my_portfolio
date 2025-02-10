@@ -143,15 +143,23 @@ export default function ProjectsPage() {
           className="fixed inset-0 bg-white dark:bg-[#121212] flex items-center justify-center z-50"
           exit={{ opacity: 0 }}
         >
-          <button
-            onClick={() => setIsPaused(!isPaused)}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          >
-            {isPaused ? 
-              <span className="text-2xl">▶️</span> : 
-              <span className="text-2xl">⏸️</span>
-            }
-          </button>
+          <div className="absolute top-4 right-4 flex gap-2">
+            <button
+              onClick={() => setIsPaused(!isPaused)}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              {isPaused ? 
+                <span className="text-2xl">▶️</span> : 
+                <span className="text-2xl">⏸️</span>
+              }
+            </button>
+            <button
+              onClick={() => setShowIntro(false)}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              <span className="text-2xl">⏭️</span>
+            </button>
+          </div>
           <AnimatePresence mode='wait'>
             {introStep < introSlides.length && (
               <motion.div
