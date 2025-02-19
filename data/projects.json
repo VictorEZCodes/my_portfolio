@@ -381,7 +381,7 @@
       "OpenAI API"
     ],
     "link": "https://financeaiagent.netlify.app/",
-    "favorite": true,
+    "favorite": false,
     "imageUrl": "/images/financeai.png"
   },
   {
@@ -411,5 +411,19 @@
     ],
     "link": "https://github.com/VictorEZCodes/DiceCasino",
     "imageUrl": "/images/dicecasino.png"
+  },
+  {
+    "id": 32,
+    "title": "AirBuckets",
+    "description": "Experience the future of cloud storage with our unlimited, secure, and completely free platform—no hidden fees or limits.",
+    "techStack": [
+      "Vite",
+      "Tailwind CSS",
+      "Express.js",
+      "Github Gist API"
+    ],
+    "favorite": true,
+    "link": "https://airbuckets.cloud",
+    "imageUrl": "/images/airbuckets.png"
   }
 ]

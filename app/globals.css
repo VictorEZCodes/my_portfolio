@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 * {
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 
 @media (hover: none) {
   * {
-    cursor: auto !important;
+    /* cursor: auto !important; */
   }
   
   .custom-cursor {
-    display: none !important;
+    /* display: none !important; */
   }
 }

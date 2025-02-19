@@ -3,7 +3,7 @@ import { Space_Grotesk } from 'next/font/google'
 import ThemeToggle from './components/ThemeToggle'
 import CommandPalette from './components/CommandPalette'
 import ShortcutIndicator from './components/ShortcutIndicator'
-import CustomCursor from './components/CustomCursor'
+// import CustomCursor from './components/CustomCursor'
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-gray-50 dark:bg-[#121212] transition-colors duration-300">
       <CommandPalette />
       <ShortcutIndicator />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
         <script dangerouslySetInnerHTML={{
           __html: `
             (function() {
