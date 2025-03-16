@@ -3,9 +3,7 @@
     "id": 1,
     "title": "FitTrackerPro",
     "description": "A comprehensive fitness tracking web application that helps users monitor their health metrics. This tool features a BMI (Body Mass Index) calculator and a daily calorie needs estimator. Users can input their weight, height, age, and gender to receive personalized health insights. The clean, user-friendly interface makes it easy for individuals to track their fitness progress and set informed health goals.",
-    "techStack": [
-      "React"
-    ],
+    "techStack": ["React"],
     "link": "https://fittrackerpro.vercel.app/",
     "imageUrl": "/images/tracker.png"
   },
@@ -28,11 +26,7 @@
     "id": 3,
     "title": "Blockchain Farm",
     "description": "A decentralized application (DApp) that lets user farm X tokens and earn X tokens.",
-    "techStack": [
-      "Solidity",
-      "Web3.js",
-      "Next.js"
-    ],
+    "techStack": ["Solidity", "Web3.js", "Next.js"],
     "link": "https://v2testfarmbsc.netlify.app/",
     "imageUrl": "/images/farm.png"
   },
@@ -40,11 +34,7 @@
     "id": 4,
     "title": "Recipe Finder",
     "description": "A dynamic web application that helps users discover new recipes based on ingredients, dietary preferences, and nutritional requirements. Leveraging the powerful Edamam API, this tool offers a vast database of recipes from around the world.",
-    "techStack": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
+    "techStack": ["HTML", "CSS", "JavaScript"],
     "link": "https://victorezcodes.github.io/recipe-finder-edamam/",
     "imageUrl": "/images/recipe.png"
   },
@@ -87,11 +77,7 @@
     "id": 7,
     "title": "OptiPic",
     "description": "OptiPic is a powerful, user-friendly web application designed for efficient bulk image compression. This tool allows users to optimize multiple images simultaneously, significantly reducing file sizes while maintaining image quality. Perfect for photographers, web developers, and content creators who need to manage and optimize large image libraries quickly and easily.",
-    "techStack": [
-      "Next.js",
-      "Tailwind CSS",
-      "Node.js"
-    ],
+    "techStack": ["Next.js", "Tailwind CSS", "Node.js"],
     "link": "https://optipic.vercel.app/",
     "imageUrl": "/images/optipic.png"
   },
@@ -99,11 +85,7 @@
     "id": 8,
     "title": "Split The Bill",
     "description": "SplitTheBill is a web application designed to simplify the process of splitting bills among friends, roommates, or colleagues. It offers an intuitive interface for managing shared expenses with percentage-based splitting capabilities.",
-    "techStack": [
-      "Next.js",
-      "Tailwind CSS",
-      "TypeScript"
-    ],
+    "techStack": ["Next.js", "Tailwind CSS", "TypeScript"],
     "link": "https://thebillsplitterweb.netlify.app",
     "imageUrl": "/images/bill.png"
   },
@@ -213,12 +195,7 @@
     "id": 16,
     "title": "Open-Source API Tester",
     "description": "A lightweight, browser-based API testing tool for developers to test and organize API requests efficiently without the complexity of traditional tools.",
-    "techStack": [
-      "JavaScript",
-      "Vite",
-      "Tailwind CSS",
-      "HTML5"
-    ],
+    "techStack": ["JavaScript", "Vite", "Tailwind CSS", "HTML5"],
     "link": "https://openapitester.netlify.app/",
     "imageUrl": "/images/api_tester.png"
   },
@@ -240,11 +217,7 @@
     "id": 18,
     "title": "Insight Flow Analytics",
     "description": "A lightweight analytics dashboard that provides users with essential, real-time web traffic insights.",
-    "techStack": [
-      "JavaScript",
-      "Vite",
-      "Tailwind CSS"
-    ],
+    "techStack": ["JavaScript", "Vite", "Tailwind CSS"],
     "link": "https://insightflowanalytics.netlify.app/",
     "imageUrl": "/images/insightflow.png"
   },
@@ -252,11 +225,7 @@
     "id": 19,
     "title": "WhisperBox",
     "description": "A simple SaaS that helps startups, indie hackers, and small businesses gather user feedback quickly and effortlessly. Embed a small widget on your site/app, view all feedback in a centralized dashboard, and iterate based on real user insights.",
-    "techStack": [
-      "Next.js",
-      "Railway",
-      "Tailwind CSS"
-    ],
+    "techStack": ["Next.js", "Railway", "Tailwind CSS"],
     "link": "https://whisperbox.tech/",
     "imageUrl": "/images/whisperbox.png"
   },
@@ -264,12 +233,7 @@
     "id": 20,
     "title": "Argument Winner",
     "description": "Argument Winner is a web application that helps users quickly find and cite academic studies to support their arguments in real-time discussions. Unlike generic search engines or AI tools that often surface social media content, this tool specifically focuses on academic research papers.",
-    "techStack": [
-      "Next.js",
-      "OpenAI API",
-      "Tailwind CSS",
-      "Supabase"
-    ],
+    "techStack": ["Next.js", "OpenAI API", "Tailwind CSS", "Supabase"],
     "link": "https://argwinner.netlify.app/",
     "imageUrl": "/images/argument_winner.png"
   },
@@ -277,11 +241,7 @@
     "id": 21,
     "title": "Discord-Whatsapp Bridge",
     "description": "A Node.js bot that forwards messages from Discord channels to WhatsApp. Messages from specified Discord channels are automatically forwarded to a designated WhatsApp number with preserved formatting and sender information.",
-    "techStack": [
-      "Node.js",
-      "Discord.js",
-      "Whatsapp-web.js"
-    ],
+    "techStack": ["Node.js", "Discord.js", "Whatsapp-web.js"],
     "link": "https://github.com/VictorEZCodes/discord-whatsapp-bridge/",
     "imageUrl": "/images/discord-whatsapp-bridge.png"
   },
@@ -289,11 +249,7 @@
     "id": 22,
     "title": "Tab Mood Tracker Extension",
     "description": "Tracks your mood based on websites you visit.",
-    "techStack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
+    "techStack": ["JavaScript", "HTML", "CSS"],
     "link": "https://github.com/VictorEZCodes/tab-mood-tracker-extension/",
     "imageUrl": "/images/tab-mood-tracker.png"
   },
@@ -301,11 +257,7 @@
     "id": 23,
     "title": "Personal Finance Tracker",
     "description": "A modern web application built with Next.js and React that helps users manage their personal finances. Track income, expenses, and monitor spending patterns with interactive visualizations.",
-    "techStack": [
-      "Next.js",
-      "React Context API",
-      "Tailwind CSS"
-    ],
+    "techStack": ["Next.js", "React Context API", "Tailwind CSS"],
     "link": "https://personalfinancedemotracker.netlify.app/",
     "imageUrl": "/images/personal-finance-tracker.png"
   },
@@ -313,11 +265,7 @@
     "id": 24,
     "title": "Smart CodeGen",
     "description": "A robust, AI-powered CLI tool for efficient React development. Generate React components, custom hooks, and CRUD operations with TypeScript support and industry best practices baked in.",
-    "techStack": [
-      "JavaScript",
-      "OpenAI API",
-      "Node.js"
-    ],
+    "techStack": ["JavaScript", "OpenAI API", "Node.js"],
     "link": "https://www.npmjs.com/package/smart-codegen-cli/",
     "imageUrl": "/images/codegen.png"
   },
@@ -325,12 +273,7 @@
     "id": 25,
     "title": "AI Agent NBA Props Analyzer",
     "description": "NBA Props Analyzer is a tool designed to analyze player props for upcoming NBA games. It leverages various data sources to provide insights and recommendations on player performance metrics.",
-    "techStack": [
-      "JavaScript",
-      "OpenAI API",
-      "RapidAPI",
-      "Node.js"
-    ],
+    "techStack": ["JavaScript", "OpenAI API", "RapidAPI", "Node.js"],
     "link": "https://github.com/VictorEZCodes/ai-agent-nba-props-analyzer/",
     "imageUrl": "/images/nba.png"
   },
@@ -338,10 +281,7 @@
     "id": 26,
     "title": "Time Capsule",
     "description": "A sleek and interactive website designed to count down the days, hours, minutes, and seconds to the arrival of 2025. It offers a visually engaging experience, complete with dynamic updates, ensuring users stay captivated as they anticipate the future. Whether you're curious about the time left until the new year or simply enjoy tracking moments, this countdown website keeps you informed and excited every step of the way!",
-    "techStack": [
-      "Next.js",
-      "Tailwind CSS"
-    ],
+    "techStack": ["Next.js", "Tailwind CSS"],
     "link": "https://maketimecapsule.netlify.app/",
     "imageUrl": "/images/capsule.png"
   },
@@ -349,10 +289,7 @@
     "id": 27,
     "title": "Contently",
     "description": "Contently is a platform that allows users to convert website content into clean, structured Markdown format. It is designed for developers, researchers, content creators, and AI enthusiasts who need efficient and automated solutions for managing, repurposing, and archiving web content.",
-    "techStack": [
-      "Vite",
-      "Tailwind CSS"
-    ],
+    "techStack": ["Vite", "Tailwind CSS"],
     "link": "https://contentlyai.netlify.app/",
     "imageUrl": "/images/contently.png"
   },
@@ -360,11 +297,7 @@
     "id": 28,
     "title": "Deepseek AI API Chat Interface",
     "description": "A modern, responsive web application for interacting with DeepSeek's AI models. Built with vanilla JavaScript and Tailwind CSS.",
-    "techStack": [
-      "Vite",
-      "Tailwind CSS",
-      "LocalStorage"
-    ],
+    "techStack": ["Vite", "Tailwind CSS", "LocalStorage"],
     "link": "https://deepseekui.netlify.app/",
     "imageUrl": "/images/deepseek.png"
   },
@@ -388,12 +321,7 @@
     "id": 30,
     "title": "BSCrypt Finance",
     "description": "Boost investor confidence and community trust by securing your token with a liquidity lock. Ensure long-term stability and demonstrate your commitment to transparency and security.",
-    "techStack": [
-      "React",
-      "Web3.js",
-      "Solidity",
-      "Coingecko API"
-    ],
+    "techStack": ["React", "Web3.js", "Solidity", "Coingecko API"],
     "link": "https://bscrypt.netlify.app/",
     "imageUrl": "/images/bscrypt.png"
   },
@@ -416,14 +344,40 @@
     "id": 32,
     "title": "AirBuckets",
     "description": "Experience the future of cloud storage with our unlimited, secure, and completely free platform—no hidden fees or limits.",
+    "techStack": ["Vite", "Tailwind CSS", "Express.js", "Github Gist API"],
+    "favorite": false,
+    "link": "https://airbuckets.cloud",
+    "imageUrl": "/images/airbuckets.png"
+  },
+  {
+    "id": 33,
+    "title": "Shimmer Design Styles",
+    "description": "A comprehensive collection of modern shimmer loading effects and skeleton screens.",
+    "techStack": ["HTML", "Tailwind CSS"],
+    "link": "https://shimmereffects.netlify.app",
+    "imageUrl": "/images/shimmer.png"
+  },
+  {
+    "id": 34,
+    "title": "Tic Tac Toe",
+    "description": "A modern take on the classic Tic Tac Toe game featuring a clean, responsive interface with smooth animations.",
+    "techStack": ["Vite", "Tailwind CSS", "Express.js"],
+    "link": "https://tiktaka.netlify.app",
+    "imageUrl": "/images/tictactoe.png"
+  },
+  {
+    "id": 35,
+    "title": "PayPort",
+    "description": "PayPort is a comprehensive digital payment solution that allows users to manage various financial transactions seamlessly.",
     "techStack": [
       "Vite",
       "Tailwind CSS",
       "Express.js",
-      "Github Gist API"
+      "TypeScript",
+      "Redux Store"
     ],
     "favorite": true,
-    "link": "https://airbuckets.cloud",
-    "imageUrl": "/images/airbuckets.png"
+    "link": "https://payportservices.netlify.app",
+    "imageUrl": "/images/payport.png"
   }
 ]

@@ -1,8 +1,20 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function ProjectCard({ project, isExpanded, onExpand }) {
+  const [isTextOverflowing, setIsTextOverflowing] = useState(false);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    if (textRef.current) {
+      const isOverflowing =
+        textRef.current.scrollHeight > textRef.current.clientHeight;
+      setIsTextOverflowing(isOverflowing);
+    }
+  }, [project.description]);
+
   return (
     <div
       className="bg-white dark:bg-gray-700 shadow overflow-hidden sm:rounded-lg flex flex-col h-full
@@ -26,10 +38,15 @@ export default function ProjectCard({ project, isExpanded, onExpand }) {
         <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
           {project.title}
         </h3>
-        <div className={`mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-300 ${isExpanded ? '' : 'line-clamp-3'}`}>
+        <div
+          ref={textRef}
+          className={`mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-300 ${
+            isExpanded ? "" : "line-clamp-3"
+          }`}
+        >
           {project.description}
         </div>
-        {project.description.length > 150 && (
+        {isTextOverflowing && (
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -37,7 +54,7 @@ export default function ProjectCard({ project, isExpanded, onExpand }) {
             }}
             className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-sm mt-2"
           >
-            {isExpanded ? 'Read less' : 'Read more'}
+            {isExpanded ? "Read less" : "Read more"}
           </button>
         )}
       </div>
@@ -48,7 +65,7 @@ export default function ProjectCard({ project, isExpanded, onExpand }) {
               Tech Stack
             </dt>
             <dd className="mt-1 text-sm text-gray-900 dark:text-white sm:mt-0 sm:col-span-2">
-              {project.techStack.join(', ')}
+              {project.techStack.join(", ")}
             </dd>
           </div>
           {project.link && (
@@ -71,5 +88,5 @@ export default function ProjectCard({ project, isExpanded, onExpand }) {
         </dl>
       </div>
     </div>
-  )
+  );
 }
