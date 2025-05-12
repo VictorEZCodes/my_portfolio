@@ -379,5 +379,22 @@
     "favorite": true,
     "link": "https://payportservices.netlify.app",
     "imageUrl": "/images/payport.png"
+  },
+  {
+    "id": 36,
+    "title": "Harmony AI",
+    "description": "As the developer behind Harmony AI, I worked closely with my client to create a comprehensive mental wellness platform offering personalized therapeutic tools and guided self-reflection capabilities.",
+    "techStack": [
+      "Vite",
+      "Tailwind CSS",
+      "Express.js",
+      "TypeScript",
+      "MongoDB",
+      "OpenAI API",
+      "Claude API",
+      "i18n"
+    ],
+    "link": "https://therapyaiprod.netlify.app",
+    "imageUrl": "/images/harmony.png"
   }
 ]
