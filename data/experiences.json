@@ -1,48 +1,63 @@
 [
   {
     "id": 1,
-    "title": "Freelancer",
-    "company": "Upwork",
-    "location": "Lagos, Nigeria",
-    "duration": "April 2024 - February 2025",
-    "description": [
-      "Provided technical consulting and project management services, ensuring timely delivery and client satisfaction.",
-      "Developed custom web applications for clients using React, Node.js, and MongoDB."
-    ],
-    "techStack": ["React.js", "Next.js", "Node.js", "JavaScript", "Solidity", "MongoDB", "TailwindCSS", "Railway"],
-    "imageUrl": "/images/upwork.png"
-  },
-  {
-    "id": 2,
-    "title": "Junior Frontend Engineer",
-    "company": "PayOnUs",
-    "location": "Lagos, Nigeria",
-    "duration": "January 2025 - Present",
-    "description": [
-      "Developed and implemented responsive user interfaces for the authentication system, including sign-up and login pages.",
-      "Built an intuitive and responsive dashboard menu system improving overall user navigation and experience.",
-      "Engineered a comprehensive KYC document management system with features for uploading, viewing, and managing documents.",
-      "Implemented document preview functionality using react-doc-viewer, enabling users to view uploaded documents directly in the application.",
-      "Collaborated with cross-functional teams to integrate frontend components with backend APIs and ensure seamless user experience.",
-      "Contributed to sprint planning and daily stand-ups, actively participating in agile development processes."
-    ],
-    "techStack": ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "TailwindCSS"],
-    "imageUrl": "/images/onusFavicon.png"
-  },
-  {
-    "id": 3,
     "title": "Owner",
     "company": "NexTech Nomad",
     "location": "Lagos, Nigeria",
     "duration": "April 2024 - Present",
     "description": [
-      "Founded and managed a tech agency specializing in innovative web and blockchain solutions, leading a dynamic team of developers to deliver cutting-edge projects.",
-      "Collaborated with clients to understand their business needs and translated them into scalable, user-focused digital products.",
-      "Provided end-to-end technical consulting, including architecture design, development, and deployment, ensuring optimal performance and client satisfaction.",
-      "Designed and built custom web applications and decentralized solutions utilizing React, Node.js, and Solidity.",
-      "Implemented best practices in agile development, ensuring timely delivery and maintaining a high standard of quality across all projects."
+      "Founder & Lead Consultant of a tech agency specializing in innovative web and blockchain solutions. Partnered with clients to deliver cutting edge digital products, business needs into high impact solutions. Provided end-to-end technical consulting, driving optimal performance and client satisfaction."
     ],
-    "techStack": ["React.js", "Next.js", "Node.js", "JavaScript", "Solidity", "MongoDB", "TailwindCSS", "Railway"],
+    "techStack": [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "JavaScript",
+      "Solidity",
+      "MongoDB",
+      "TailwindCSS",
+      "Railway"
+    ],
     "imageUrl": "/images/nextechnomad.png"
+  },
+  {
+    "id": 2,
+    "title": "Frontend Engineer",
+    "company": "PayOnUs",
+    "location": "Lagos, Nigeria",
+    "duration": "January 2025 - Present",
+    "description": [
+      "Frontend Engineer at PayOnUs, where I developed dynamic, responsive web applications using React, prioritizing accessibility and user experience. Collaborated with cross-functional Agile teams, participating in sprint planning and daily stand ups to deliver scalable, high quality solutions."
+    ],
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "TailwindCSS"
+    ],
+    "imageUrl": "/images/onusFavicon.png"
+  },
+  {
+    "id": 3,
+    "title": "Freelancer",
+    "company": "Upwork",
+    "location": "Lagos, Nigeria",
+    "duration": "April 2024 - February 2025",
+    "description": [
+      "Freelance Web Developer and Technical Consultant, delivering project management and technical consulting services to ensure timely delivery and client satisfaction. Specialize in developing custom web applications using React and collaborating closely with clients to understand their needs and deliver innovative, scalable solutions."
+    ],
+    "techStack": [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "JavaScript",
+      "Solidity",
+      "MongoDB",
+      "TailwindCSS",
+      "Railway"
+    ],
+    "imageUrl": "/images/upwork.png"
   }
 ]

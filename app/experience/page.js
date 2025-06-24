@@ -22,7 +22,7 @@ export default function ExperiencePage() {
           ← Back
         </Link>
         <h1 className="text-3xl font-bold dark:text-white">
-          All Experience
+          All Career History
         </h1>
       </motion.div>
       <ExperiencesList experiences={experiences} />

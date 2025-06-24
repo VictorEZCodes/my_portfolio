@@ -144,7 +144,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Experience
+            Career History
           </motion.h2>
           <motion.a
             href="/experience"
