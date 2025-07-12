@@ -396,5 +396,36 @@
     ],
     "link": "https://therapyaiprod.netlify.app",
     "imageUrl": "/images/harmony.png"
+  },
+  {
+    "id": 37,
+    "title": "DineZap",
+    "description": "DineZap eliminate the slow, manual ordering process that hurts both customer experience and restaurant revenue. Customers scan a QR code at their table to order and pay instantly via their phone, eliminating wait times and boosting restaurant efficiency.",
+    "techStack": [
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Framer Motion",
+      "Tanstack Query",
+      "MongoDB",
+      "Sentry",
+      "Cloudinary",
+      "Helmet"
+    ],
+    "link": "https://dinezap.services",
+    "imageUrl": "/images/dinezap.png"
+  },
+  {
+    "id": 37,
+    "title": "RecipeShare",
+    "description": "RecipeShare is a modern, user-friendly web application designed to bring food enthusiasts together to share, discover, and review recipes. Built with a mobile-first, accessible, and responsive design, RecipeShare fosters a vibrant community where users can create, save, and explore recipes tailored to their preferences.",
+    "techStack": [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Cloudinary"
+    ],
+    "link": "https://recipe-share-frontend-mu.vercel.app",
+    "imageUrl": "/images/recipeshare.png"
   }
 ]
