@@ -16,8 +16,9 @@ export default function Home() {
   const [previewProjects, setPreviewProjects] = useState([])
 
   useEffect(() => {
-    // Get 3 random projects everytime the page is loaded
-    setPreviewProjects([...projects].sort(() => Math.random() - 0.5).slice(0, 3))
+    // Get 3 random projects from visible projects everytime the page is loaded
+    const visibleProjects = projects.filter(project => !project.hidden)
+    setPreviewProjects([...visibleProjects].sort(() => Math.random() - 0.5).slice(0, 3))
   }, [])
 
   return (
