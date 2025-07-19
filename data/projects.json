@@ -5,7 +5,8 @@
     "description": "A comprehensive fitness tracking web application that helps users monitor their health metrics. This tool features a BMI (Body Mass Index) calculator and a daily calorie needs estimator. Users can input their weight, height, age, and gender to receive personalized health insights. The clean, user-friendly interface makes it easy for individuals to track their fitness progress and set informed health goals.",
     "techStack": ["React"],
     "link": "https://fittrackerpro.vercel.app/",
-    "imageUrl": "/images/tracker.png"
+    "imageUrl": "/images/tracker.png",
+    "hidden": true
   },
   {
     "id": 2,
@@ -251,7 +252,8 @@
     "description": "Tracks your mood based on websites you visit.",
     "techStack": ["JavaScript", "HTML", "CSS"],
     "link": "https://github.com/VictorEZCodes/tab-mood-tracker-extension/",
-    "imageUrl": "/images/tab-mood-tracker.png"
+    "imageUrl": "/images/tab-mood-tracker.png",
+    "hidden": true
   },
   {
     "id": 23,
@@ -283,7 +285,8 @@
     "description": "A sleek and interactive website designed to count down the days, hours, minutes, and seconds to the arrival of 2025. It offers a visually engaging experience, complete with dynamic updates, ensuring users stay captivated as they anticipate the future. Whether you're curious about the time left until the new year or simply enjoy tracking moments, this countdown website keeps you informed and excited every step of the way!",
     "techStack": ["Next.js", "Tailwind CSS"],
     "link": "https://maketimecapsule.netlify.app/",
-    "imageUrl": "/images/capsule.png"
+    "imageUrl": "/images/capsule.png",
+    "hidden": true
   },
   {
     "id": 27,
@@ -299,7 +302,8 @@
     "description": "A modern, responsive web application for interacting with DeepSeek's AI models. Built with vanilla JavaScript and Tailwind CSS.",
     "techStack": ["Vite", "Tailwind CSS", "LocalStorage"],
     "link": "https://deepseekui.netlify.app/",
-    "imageUrl": "/images/deepseek.png"
+    "imageUrl": "/images/deepseek.png",
+    "hidden": true
   },
   {
     "id": 29,
@@ -355,7 +359,8 @@
     "description": "A comprehensive collection of modern shimmer loading effects and skeleton screens.",
     "techStack": ["HTML", "Tailwind CSS"],
     "link": "https://shimmereffects.netlify.app",
-    "imageUrl": "/images/shimmer.png"
+    "imageUrl": "/images/shimmer.png",
+    "hidden": true
   },
   {
     "id": 34,
@@ -427,5 +432,55 @@
     ],
     "link": "https://recipe-share-frontend-mu.vercel.app",
     "imageUrl": "/images/recipeshare.png"
+  },
+  {
+    "id": 38,
+    "title": "ChaoS/UI",
+    "description": "A brutalist React component library that says 'NO' to minimalism. Perfect for developers who want UI that stands out.",
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "React Router",
+      "Lucide React"
+    ],
+    "link": "https://chaosui.netlify.app",
+    "favorite": true,
+    "imageUrl": "/images/chaosui.png"
+  },
+  {
+    "id": 39,
+    "title": "GlitchLabs",
+    "description": "GlitchLabs is a creative technology studio that builds digital experiences where beautiful chaos disrupts the ordinary. This portfolio website showcases our signature digital brutalism aesthetic.",
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Framer Motion"
+    ],
+    "link": "https://theglitchlabs.xyz",
+    "favorite": true,
+    "imageUrl": "/images/theglitchlabs.png"
+  },
+  {
+    "id": 40,
+    "title": "GLADIUS",
+    "description": "A hilariously awesome pixel fighting tournament platform that brings back the joy of childhood doodles! Features real-time tournaments, unique fighter classes, live battle simulations, and tournament brackets.",
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Express",
+      "Redis"
+    ],
+    "link": "https://lmfao.fun",
+    "favorite": true,
+    "imageUrl": "/images/lmfao.png"
   }
 ]

@@ -47,7 +47,17 @@ export default function ExperienceCard({ experience, isExpanded, onExpand }) {
             {experience.title}
           </h3>
           <p className="text-sm text-gray-500 dark:text-gray-300 truncate">
-            {experience.company} • {experience.location}
+            {experience.company === "GlitchLabs" ? (
+              <span
+                className="glitch-text glitch-company"
+                data-text="GlitchLabs"
+              >
+                GlitchLabs
+              </span>
+            ) : (
+              experience.company
+            )}{" "}
+            • {experience.location}
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-300">
             {experience.duration} • {durationText}

@@ -36,7 +36,16 @@ export default function ProjectCard({ project, isExpanded, onExpand }) {
       )}
       <div className="px-4 py-5 sm:px-6 flex-grow flex flex-col">
         <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-          {project.title}
+          {project.title === "ChaoS/UI" || project.title === "GlitchLabs" ? (
+            <span
+              className="glitch-text glitch-company"
+              data-text={project.title}
+            >
+              {project.title}
+            </span>
+          ) : (
+            project.title
+          )}
         </h3>
         <div
           ref={textRef}

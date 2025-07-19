@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Owner",
-    "company": "NexTech Nomad",
+    "company": "GlitchLabs",
     "location": "Lagos, Nigeria",
     "duration": "April 2024 - Present",
     "description": [
@@ -18,7 +18,7 @@
       "TailwindCSS",
       "Railway"
     ],
-    "imageUrl": "/images/nextechnomad.png"
+    "imageUrl": "/images/chaos-ui-logo.svg"
   },
   {
     "id": 2,
@@ -44,7 +44,7 @@
     "title": "Freelancer",
     "company": "Upwork",
     "location": "Lagos, Nigeria",
-    "duration": "April 2024 - February 2025",
+    "duration": "April 2024 - Present",
     "description": [
       "Freelance Web Developer and Technical Consultant, delivering project management and technical consulting services to ensure timely delivery and client satisfaction. Specialize in developing custom web applications using React and collaborating closely with clients to understand their needs and deliver innovative, scalable solutions."
     ],
