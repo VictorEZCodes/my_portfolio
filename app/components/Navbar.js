@@ -14,8 +14,8 @@ function Equalizer() {
       {[1,2,3,4,5].map(i => (
         <span
           key={i}
-          className={`w-[3px] bg-glow rounded-full transition-all duration-300 ${
-            playing ? `animate-eq-${i}` : 'h-[4px]'
+          className={`w-[3px] rounded-full transition-all duration-300 ${
+            playing ? `bg-glow animate-eq-${i}` : 'h-[4px] bg-space-400'
           }`}
         />
       ))}
@@ -30,7 +30,6 @@ export default function Navbar() {
 
   useEffect(() => {
     setDarkMode(document.documentElement.classList.contains('dark'))
-
     const onScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
@@ -58,22 +57,19 @@ export default function Navbar() {
 
   return (
     <>
-      {/* === TOP BAR === */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-warm-50/80 dark:bg-warm-950/80 backdrop-blur-md border-b border-warm-200/50 dark:border-warm-800/50'
+          ? 'bg-space-50/80 dark:bg-space-950/80 backdrop-blur-md border-b border-space-200/50 dark:border-space-800/50'
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-12 sm:h-14 flex items-center justify-between">
-          {/* Left: Name + EQ */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-sm font-semibold text-warm-800 dark:text-warm-200 group-hover:text-glow transition-colors">
+            <span className="text-sm font-semibold text-space-800 dark:text-space-200 group-hover:text-glow transition-colors">
               Victor E.
             </span>
             <Equalizer />
           </Link>
 
-          {/* Center: Nav links — desktop only */}
           <div className="hidden sm:flex items-center gap-1">
             {links.map(link => (
               <Link
@@ -82,7 +78,7 @@ export default function Navbar() {
                 className={`px-3 py-1.5 text-sm rounded-md transition-all duration-200 ${
                   pathname === link.href
                     ? 'text-glow font-semibold'
-                    : 'text-warm-500 dark:text-warm-400 hover:text-warm-800 dark:hover:text-warm-200'
+                    : 'text-space-500 dark:text-space-400 hover:text-space-800 dark:hover:text-space-200'
                 }`}
               >
                 {link.label}
@@ -90,31 +86,25 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right: Resume (desktop) + Theme */}
           <div className="flex items-center gap-3">
             <a
               href="/victorezeanyika.pdf"
               target="_blank"
-              className="hidden sm:inline-flex text-xs font-medium px-3 py-1.5 rounded-md border border-warm-300 dark:border-warm-700 text-warm-600 dark:text-warm-300 hover:border-glow hover:text-glow transition-all duration-200"
+              className="hidden sm:inline-flex text-xs font-medium px-3 py-1.5 rounded-md border border-space-300 dark:border-space-700 text-space-600 dark:text-space-300 hover:border-glow hover:text-glow transition-all duration-200"
             >
               Resume
             </a>
             <button
               onClick={toggleTheme}
-              className="p-1.5 rounded-md text-warm-500 dark:text-warm-400 hover:text-glow transition-colors"
+              className="p-1.5 rounded-md text-space-500 dark:text-space-400 hover:text-glow transition-colors"
             >
-              {darkMode ? (
-                <SunIcon className="h-4 w-4" />
-              ) : (
-                <MoonIcon className="h-4 w-4" />
-              )}
+              {darkMode ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
             </button>
           </div>
         </div>
       </nav>
 
-      {/* === BOTTOM TAB BAR — mobile only, sits above the audio player === */}
-      <div className="sm:hidden fixed bottom-14 left-0 right-0 z-50 bg-warm-50/90 dark:bg-warm-950/90 backdrop-blur-md border-t border-warm-200/50 dark:border-warm-800/50">
+      <div className="sm:hidden fixed bottom-14 left-0 right-0 z-50 bg-space-50/90 dark:bg-space-950/90 backdrop-blur-md border-t border-space-200/50 dark:border-space-800/50">
         <div className="flex items-center justify-around h-12">
           {mobileLinks.map(link => {
             const Icon = link.icon
@@ -122,13 +112,8 @@ export default function Navbar() {
 
             if (link.external) {
               return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-0.5 text-warm-400 dark:text-warm-600 transition-colors"
-                >
+                <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-0.5 text-space-400 dark:text-space-600 transition-colors">
                   <Icon className="h-4 w-4" />
                   <span className="text-[10px]">{link.label}</span>
                 </a>
@@ -136,15 +121,8 @@ export default function Navbar() {
             }
 
             return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`flex flex-col items-center gap-0.5 transition-colors ${
-                  active
-                    ? 'text-glow'
-                    : 'text-warm-400 dark:text-warm-600'
-                }`}
-              >
+              <Link key={link.href} href={link.href}
+                className={`flex flex-col items-center gap-0.5 transition-colors ${active ? 'text-glow' : 'text-space-400 dark:text-space-600'}`}>
                 <Icon className={`h-4 w-4 ${active ? 'scale-110' : ''} transition-transform`} />
                 <span className={`text-[10px] ${active ? 'font-semibold' : ''}`}>{link.label}</span>
               </Link>

@@ -33,9 +33,9 @@ function ExperienceBlock({ experience, index }) {
       <div className="flex gap-6">
         {/* Timeline */}
         <div className="flex flex-col items-center">
-          <div className="w-3 h-3 rounded-full bg-glow mt-2 flex-shrink-0 ring-4 ring-warm-50 dark:ring-warm-950" />
+          <div className="w-3 h-3 rounded-full bg-glow shadow-[0_0_8px_rgba(201,160,255,0.4)] mt-2 flex-shrink-0 ring-4 ring-space-50 dark:ring-space-950" />
           {index < experiences.length - 1 && (
-            <div className="w-px flex-1 bg-warm-200 dark:bg-warm-800 my-1" />
+            <div className="w-px flex-1 bg-space-200 dark:bg-space-800 my-1" />
           )}
         </div>
 
@@ -62,13 +62,13 @@ function ExperienceBlock({ experience, index }) {
                 ) : (
                   <span className="text-glow">{experience.company}</span>
                 )}
-                <span className="text-warm-500 dark:text-warm-500"> — {experience.location}</span>
+                <span className="text-space-500 dark:text-space-500"> — {experience.location}</span>
               </p>
             </div>
           </div>
 
           {/* Duration */}
-          <div className="flex gap-3 text-xs text-warm-500 dark:text-warm-500 mb-4">
+          <div className="flex gap-3 text-xs text-space-500 dark:text-space-500 mb-4">
             <span>{experience.duration}</span>
             <span className="text-glow font-semibold">{duration}</span>
           </div>
@@ -76,7 +76,7 @@ function ExperienceBlock({ experience, index }) {
           {/* Description */}
           <div className="space-y-2 mb-4">
             {experience.description.map((item, j) => (
-              <p key={j} className="text-sm text-warm-600 dark:text-warm-400 leading-relaxed max-w-xl">
+              <p key={j} className="text-sm text-space-600 dark:text-space-400 leading-relaxed max-w-xl">
                 {item}
               </p>
             ))}
@@ -87,7 +87,7 @@ function ExperienceBlock({ experience, index }) {
             {experience.techStack.map((tech, j) => (
               <span
                 key={j}
-                className="text-xs px-2.5 py-1 rounded bg-warm-200/50 dark:bg-warm-800/50 text-warm-600 dark:text-warm-400"
+                className="text-xs px-2.5 py-1 rounded bg-space-200/50 dark:bg-space-800/50 text-space-600 dark:text-space-400"
               >
                 {tech}
               </span>
@@ -109,16 +109,16 @@ export default function ExperiencePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-xs text-warm-500 dark:text-warm-500 tracking-widest mb-1">
+          <p className="text-xs text-space-500 dark:text-space-500 tracking-widest mb-1">
             LINER NOTES
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-2">
             Experience
           </h1>
-          <p className="text-sm text-warm-500 dark:text-warm-500">
+          <p className="text-sm text-space-500 dark:text-space-500">
             The journey so far
           </p>
-          <div className="h-px bg-warm-200 dark:bg-warm-800 mt-6" />
+          <div className="h-px bg-space-200 dark:bg-space-800 mt-6" />
         </motion.div>
 
         <div>

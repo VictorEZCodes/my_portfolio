@@ -13,7 +13,6 @@ export default function AudioPlayer({ onPlayStateChange }) {
   const [muted, setMuted] = useState(false)
   const [loaded, setLoaded] = useState(false)
 
-  // Autoplay on mount — browsers block autoplay so we try on first user interaction as fallback
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
@@ -25,7 +24,6 @@ export default function AudioPlayer({ onPlayStateChange }) {
         setPlaying(true)
         onPlayStateChange?.(true)
       }).catch(() => {
-        // Browser blocked autoplay — play on first click/touch/keydown anywhere
         const playOnInteraction = () => {
           audio.play().then(() => {
             setPlaying(true)
@@ -53,7 +51,6 @@ export default function AudioPlayer({ onPlayStateChange }) {
     audio.addEventListener('loadedmetadata', onLoadedMetadata)
     audio.addEventListener('timeupdate', onTimeUpdate)
 
-    // Try autoplay once audio is ready
     if (audio.readyState >= 2) {
       tryAutoplay()
     } else {
@@ -103,32 +100,29 @@ export default function AudioPlayer({ onPlayStateChange }) {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-warm-100/90 dark:bg-warm-900/90 backdrop-blur-md border-t border-warm-200/50 dark:border-warm-800/50">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-space-100/90 dark:bg-space-900/90 backdrop-blur-md border-t border-space-200/50 dark:border-space-800/50">
       <audio ref={audioRef} src="/audio/audio.mp3" preload="metadata" loop />
 
-      {/* Progress bar (clickable) */}
       <div
         ref={progressRef}
         className="absolute top-0 left-0 right-0 h-1 -translate-y-full cursor-pointer group"
         onClick={seek}
       >
-        <div className="absolute inset-0 bg-warm-200/50 dark:bg-warm-800/50" />
+        <div className="absolute inset-0 bg-space-200/50 dark:bg-space-800/50" />
         <div
-          className="absolute top-0 left-0 h-full bg-glow transition-[width] duration-100"
-          style={{ width: `${progress}%` }}
+          className="absolute top-0 left-0 h-full transition-[width] duration-100"
+          style={{ width: `${progress}%`, background: 'linear-gradient(90deg, #C9A0FF, #E8B86D)' }}
         />
-        {/* Hover thumb */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-glow opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-glow opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_6px_rgba(201,160,255,0.5)]"
           style={{ left: `${progress}%`, transform: `translate(-50%, -50%)` }}
         />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center gap-4">
-        {/* Play/Pause */}
         <button
           onClick={togglePlay}
-          className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-glow text-warm-900 hover:scale-105 transition-transform"
+          className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-glow text-space-950 hover:scale-105 transition-transform shadow-[0_0_12px_rgba(201,160,255,0.3)]"
         >
           {playing ? (
             <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor">
@@ -142,22 +136,19 @@ export default function AudioPlayer({ onPlayStateChange }) {
           )}
         </button>
 
-        {/* Track info */}
         <div className="flex-1 min-w-0">
           <p className="text-xs font-medium truncate">Now Playing</p>
-          <p className="text-[10px] text-warm-500 dark:text-warm-500 truncate">Portfolio Vibes</p>
+          <p className="text-[10px] text-space-500 dark:text-space-500 truncate">Portfolio Vibes</p>
         </div>
 
-        {/* Time */}
-        <span className="text-[10px] tabular-nums text-warm-400 dark:text-warm-600 hidden sm:block">
+        <span className="text-[10px] tabular-nums text-space-400 dark:text-space-600 hidden sm:block">
           {fmt(currentTime)} / {fmt(duration)}
         </span>
 
-        {/* Volume */}
         <div className="hidden sm:flex items-center gap-2">
           <button
             onClick={toggleMute}
-            className="text-warm-400 dark:text-warm-600 hover:text-glow transition-colors"
+            className="text-space-400 dark:text-space-600 hover:text-glow transition-colors"
           >
             {muted || volume === 0 ? (
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -185,7 +176,7 @@ export default function AudioPlayer({ onPlayStateChange }) {
               setMuted(v === 0)
               if (audioRef.current) audioRef.current.volume = v
             }}
-            className="w-16 h-1 accent-[#D4A853] bg-warm-200 dark:bg-warm-800 rounded-full appearance-none cursor-pointer
+            className="w-16 h-1 accent-[#C9A0FF] bg-space-200 dark:bg-space-800 rounded-full appearance-none cursor-pointer
             [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-glow"
           />
         </div>

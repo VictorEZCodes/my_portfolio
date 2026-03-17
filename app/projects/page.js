@@ -24,7 +24,7 @@ function ProjectRow({ project, index, onHover, onLeave }) {
       >
         {/* Main row */}
         <div className="flex items-center gap-4 px-4 py-4">
-          <span className="w-8 text-right text-sm tabular-nums text-warm-400 dark:text-warm-600 flex-shrink-0">
+          <span className="w-8 text-right text-sm tabular-nums text-space-400 dark:text-space-600 flex-shrink-0">
             {String(index + 1).padStart(2, '0')}
           </span>
 
@@ -51,16 +51,16 @@ function ProjectRow({ project, index, onHover, onLeave }) {
                 <span className="ml-2 inline-block w-1.5 h-1.5 rounded-full bg-glow" />
               )}
             </p>
-            <p className="text-xs text-warm-500 dark:text-warm-500 truncate">
+            <p className="text-xs text-space-500 dark:text-space-500 truncate">
               {project.techStack.slice(0, 4).join(' / ')}
             </p>
           </div>
 
-          <span className="text-xs text-warm-400 dark:text-warm-600 tabular-nums flex-shrink-0 hidden sm:block">
+          <span className="text-xs text-space-400 dark:text-space-600 tabular-nums flex-shrink-0 hidden sm:block">
             {project.techStack.length} tools
           </span>
 
-          <span className={`text-warm-400 text-xs transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+          <span className={`text-space-400 text-xs transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
             ▼
           </span>
         </div>
@@ -86,14 +86,14 @@ function ProjectRow({ project, index, onHover, onLeave }) {
                     />
                   </div>
                 )}
-                <p className="text-sm text-warm-600 dark:text-warm-400 leading-relaxed mb-4 max-w-xl">
+                <p className="text-sm text-space-600 dark:text-space-400 leading-relaxed mb-4 max-w-xl">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.techStack.map((tech, j) => (
                     <span
                       key={j}
-                      className="text-xs px-2 py-0.5 rounded bg-warm-200/50 dark:bg-warm-800/50 text-warm-600 dark:text-warm-400"
+                      className="text-xs px-2 py-0.5 rounded bg-space-200/50 dark:bg-space-800/50 text-space-600 dark:text-space-400"
                     >
                       {tech}
                     </span>
@@ -175,13 +175,13 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-xs text-warm-500 dark:text-warm-500 tracking-widest mb-1">
+          <p className="text-xs text-space-500 dark:text-space-500 tracking-widest mb-1">
             FULL TRACKLIST
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-2">
             Projects
           </h1>
-          <p className="text-sm text-warm-500 dark:text-warm-500">
+          <p className="text-sm text-space-500 dark:text-space-500">
             {visibleProjects.length} tracks — click any to expand
           </p>
         </motion.div>
@@ -194,8 +194,8 @@ export default function ProjectsPage() {
               onClick={() => setFilter(key)}
               className={`text-xs px-3 py-1.5 rounded-md transition-all duration-200 ${
                 filter === key
-                  ? 'bg-glow text-warm-900 font-semibold'
-                  : 'text-warm-500 hover:text-warm-800 dark:hover:text-warm-200 border border-warm-200 dark:border-warm-800'
+                  ? 'bg-glow text-space-950 font-semibold'
+                  : 'text-space-500 hover:text-space-800 dark:hover:text-space-200 border border-space-200 dark:border-space-800'
               }`}
             >
               {label}
@@ -205,7 +205,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-warm-200 dark:bg-warm-800 mb-1" />
+        <div className="h-px bg-space-200 dark:bg-space-800 mb-1" />
 
         {/* Track list */}
         <div>
@@ -220,10 +220,10 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        <div className="h-px bg-warm-200 dark:bg-warm-800 mt-1" />
+        <div className="h-px bg-space-200 dark:bg-space-800 mt-1" />
 
         {/* Stats */}
-        <div className="mt-6 flex gap-8 text-xs text-warm-400 dark:text-warm-600">
+        <div className="mt-6 flex gap-8 text-xs text-space-400 dark:text-space-600">
           <span>{filtered.length} projects</span>
           <span>{[...new Set(filtered.flatMap(p => p.techStack))].length} technologies</span>
         </div>

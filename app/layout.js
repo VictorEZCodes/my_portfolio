@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           `
         }} />
       </head>
-      <body className="bg-warm-50 dark:bg-warm-950 text-warm-900 dark:text-warm-100 transition-colors duration-300 min-h-screen">
+      <body className="bg-space-50 dark:bg-space-950 text-space-900 dark:text-space-100 transition-colors duration-300 min-h-screen">
         <LayoutClient>
           {children}
         </LayoutClient>

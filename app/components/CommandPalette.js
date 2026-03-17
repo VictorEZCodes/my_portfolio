@@ -37,27 +37,27 @@ export default function CommandPalette() {
 
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
-      <div className="fixed inset-0 bg-warm-950/30 backdrop-blur-sm" aria-hidden="true" />
+      <div className="fixed inset-0 bg-space-950/30 backdrop-blur-sm" aria-hidden="true" />
       <div className="fixed inset-0 overflow-y-auto p-4 sm:p-6 md:p-20">
-        <Dialog.Panel className="mx-auto max-w-md transform overflow-hidden rounded-xl bg-warm-50 dark:bg-warm-900 shadow-2xl border border-warm-200 dark:border-warm-800 transition-all">
+        <Dialog.Panel className="mx-auto max-w-md transform overflow-hidden rounded-xl bg-space-50 dark:bg-space-900 shadow-2xl border border-space-200 dark:border-space-800 transition-all">
           <div className="relative">
-            <MagnifyingGlassIcon className="pointer-events-none absolute left-4 top-3.5 h-4 w-4 text-warm-400" />
+            <MagnifyingGlassIcon className="pointer-events-none absolute left-4 top-3.5 h-4 w-4 text-space-400" />
             <input
               type="text"
-              className="h-11 w-full border-0 bg-transparent pl-10 pr-4 text-warm-900 dark:text-warm-100 placeholder:text-warm-400 focus:ring-0 text-sm"
+              className="h-11 w-full border-0 bg-transparent pl-10 pr-4 text-space-900 dark:text-space-100 placeholder:text-space-400 focus:ring-0 text-sm"
               placeholder="Search..."
               onChange={(e) => setQuery(e.target.value)}
             />
           </div>
-          <div className="border-t border-warm-200 dark:border-warm-800 max-h-72 overflow-y-auto">
+          <div className="border-t border-space-200 dark:border-space-800 max-h-72 overflow-y-auto">
             {filtered.map(cmd => (
               <button
                 key={cmd.id}
-                className="flex w-full items-center gap-3 px-4 py-2.5 text-sm hover:bg-warm-100 dark:hover:bg-warm-800 transition-colors text-left"
+                className="flex w-full items-center gap-3 px-4 py-2.5 text-sm hover:bg-space-100 dark:hover:bg-space-800 transition-colors text-left"
                 onClick={cmd.action}
               >
                 <span className="flex-auto">{cmd.name}</span>
-                <span className="text-xs text-warm-400 tabular-nums">{cmd.shortcut.join('+')}</span>
+                <span className="text-xs text-space-400 tabular-nums">{cmd.shortcut.join('+')}</span>
               </button>
             ))}
           </div>

@@ -4,7 +4,7 @@
 
 @layer base {
   ::selection {
-    background-color: rgba(212, 168, 83, 0.3);
+    background-color: rgba(201, 160, 255, 0.3);
   }
 
   ::-webkit-scrollbar {
@@ -14,11 +14,11 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(212, 168, 83, 0.2);
+    background: rgba(201, 160, 255, 0.2);
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(212, 168, 83, 0.4);
+    background: rgba(201, 160, 255, 0.4);
   }
 }
 
@@ -28,59 +28,25 @@
 }
 
 .track-row:hover {
-  background: rgba(212, 168, 83, 0.04);
+  background: rgba(201, 160, 255, 0.04);
 }
 
 .dark .track-row:hover {
-  background: rgba(212, 168, 83, 0.06);
+  background: rgba(201, 160, 255, 0.06);
 }
 
-/* Vinyl spin — 139 BPM = ~2.3 beats per second
-   Vinyl does one full rotation every 4 beats (1.728s) when playing */
-@keyframes vinyl-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.vinyl-spinning {
-  animation: vinyl-spin 3.456s linear infinite; /* 8 beats per rotation */
-}
-
-.vinyl-paused {
-  animation: vinyl-spin 3.456s linear infinite;
-  animation-play-state: paused;
-}
-
-/* Vinyl groove pulse — subtle when idle */
-@keyframes groove-pulse {
+/* Waveform bars — bounce synced to 139 BPM */
+@keyframes waveform-bounce {
   0%, 100% {
-    opacity: 0.15;
-    border-width: 1px;
+    height: 8px;
   }
   50% {
-    opacity: 0.25;
-    border-width: 1px;
+    height: var(--bar-height, 60px);
   }
 }
 
-.groove-ring {
-  animation: groove-pulse 3s ease-in-out infinite;
-}
-
-/* Grooves pulse on beat when music plays — 0.864s = 2 beats */
-@keyframes groove-pulse-active {
-  0%, 100% {
-    opacity: 0.12;
-    border-width: 1px;
-  }
-  50% {
-    opacity: 0.55;
-    border-width: 2px;
-  }
-}
-
-.groove-ring-active {
-  animation: groove-pulse-active 0.864s ease-in-out infinite;
+.waveform-bar-active {
+  animation: waveform-bounce 0.864s ease-in-out infinite;
 }
 
 /* Page transitions */
@@ -105,20 +71,6 @@
   transition: opacity 0.15s ease;
 }
 
-/* Waveform bars — bounce synced to 139 BPM (0.432s per beat) */
-@keyframes waveform-bounce {
-  0%, 100% {
-    height: 8px;
-  }
-  50% {
-    height: var(--bar-height, 60px);
-  }
-}
-
-.waveform-bar-active {
-  animation: waveform-bounce 0.864s ease-in-out infinite; /* 2 beats */
-}
-
 /* Glitch Effects for GlitchLabs */
 .glitch-text {
   position: relative;
@@ -137,13 +89,13 @@
 }
 
 .glitch-text::before {
-  color: #D4A853;
+  color: #C9A0FF;
   animation: glitch-1 0.5s infinite;
   clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
 }
 
 .glitch-text::after {
-  color: #E07B39;
+  color: #E8B86D;
   animation: glitch-2 0.5s infinite;
   clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
 }
