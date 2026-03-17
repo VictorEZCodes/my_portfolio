@@ -1,6 +1,54 @@
 [
   {
     "id": 1,
+    "title": "Founder & Developer",
+    "company": "UseSendi",
+    "location": "Remote",
+    "duration": "March 2026 - Present",
+    "description": [
+      "Sendi is a developer-first email API built for simple integration, strong deliverability and transparent pricing."
+    ],
+    "techStack": [],
+    "imageUrl": "/images/icon.svg"
+  },
+  {
+    "id": 2,
+    "title": "Backend Engineer",
+    "company": "PayOnUs",
+    "location": "Lagos, Nigeria",
+    "duration": "February 2026 - Present",
+    "description": [
+      "Backend Engineer at PayOnUs, where I design and maintain scalable backend services using Java. I develop RESTful APIs, optimize database interactions and ensure system reliability, performance and security. I collaborate with cross-functional Agile teams, participating in sprint planning and daily stand-ups to deliver high-quality, production-ready solutions."
+    ],
+    "techStack": [
+      "Java",
+      "RESTful APIs",
+      "Spring Boot",
+      "PostgreSQL"
+    ],
+    "imageUrl": "/images/onusFavicon.png"
+  },
+  {
+    "id": 3,
+    "title": "Frontend Engineer",
+    "company": "PayOnUs",
+    "location": "Lagos, Nigeria",
+    "duration": "January 2025 - Present",
+    "description": [
+      "Frontend Engineer at PayOnUs, where I developed dynamic, responsive web applications using React, prioritizing accessibility and user experience. Collaborated with cross-functional Agile teams, participating in sprint planning and daily stand ups to deliver scalable, high quality solutions."
+    ],
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "TailwindCSS"
+    ],
+    "imageUrl": "/images/onusFavicon.png"
+  },
+  {
+    "id": 4,
     "title": "Owner",
     "company": "GlitchLabs",
     "location": "Lagos, Nigeria",
@@ -21,30 +69,11 @@
     "imageUrl": "/images/chaos-ui-logo.svg"
   },
   {
-    "id": 2,
-    "title": "Frontend Engineer",
-    "company": "PayOnUs",
-    "location": "Lagos, Nigeria",
-    "duration": "January 2025 - Present",
-    "description": [
-      "Frontend Engineer at PayOnUs, where I developed dynamic, responsive web applications using React, prioritizing accessibility and user experience. Collaborated with cross-functional Agile teams, participating in sprint planning and daily stand ups to deliver scalable, high quality solutions."
-    ],
-    "techStack": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React.js",
-      "TailwindCSS"
-    ],
-    "imageUrl": "/images/onusFavicon.png"
-  },
-  {
-    "id": 3,
+    "id": 5,
     "title": "Freelancer",
     "company": "Upwork",
     "location": "Lagos, Nigeria",
-    "duration": "April 2024 - Present",
+    "duration": "April 2024 - February 2026",
     "description": [
       "Freelance Web Developer and Technical Consultant, delivering project management and technical consulting services to ensure timely delivery and client satisfaction. Specialize in developing custom web applications using React and collaborating closely with clients to understand their needs and deliver innovative, scalable solutions."
     ],

@@ -1,216 +1,236 @@
 'use client'
 
-import ProjectsList from '../components/ProjectsList'
+import { useState, useEffect } from 'react'
 import projects from '../../data/projects.json'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
-import SocialLinks from '../components/SocialLinks'
-import ScrollArrow from '../components/ScrollArrow'
-import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import FloatingPreview from '../components/FloatingPreview'
 
-export default function ProjectsPage() {
-  const [showIntro, setShowIntro] = useState(true)
-  const [introStep, setIntroStep] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
-
-  const totalProjects = projects.length
-  const techStacks = [...new Set(projects.flatMap(project => project.techStack))]
-  const mostUsedTech = Object.entries(
-    projects.flatMap(project => project.techStack)
-      .reduce((acc, tech) => ({ ...acc, [tech]: (acc[tech] || 0) + 1 }), {})
-  ).sort((a, b) => b[1] - a[1]).slice(0, 3)
-
-  const techCategories = {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Vite', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    backend: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Railway', 'Supabase', 'Prisma'],
-    blockchain: ['Solidity', 'Web3.js', 'Ethers.js', 'Hardhat', 'OpenZeppelin'],
-    ai: ['OpenAI API', 'HuggingFace', 'GPT-4', 'RapidAPI'],
-    tools: ['Chart.js', 'Discord.js', 'Whatsapp-web.js', 'Telegraf', 'LocalStorage', 'GitHub API']
-  }
-  
-  const introSlides = [
-    {
-      title: "Welcome to My Project Gallery",
-      content: `✨ Hello, fellow developers! ✨\n\n` +
-        `🚀 Ready to explore my coding adventures?\n` +
-        `💻 From simple scripts to full-stack applications\n` +
-        `🌟 Each project tells a unique story\n\n` +
-        `Let's dive in...`
-    },
-    {
-      title: `${totalProjects} Projects Created`,
-      content: (() => {
-        const projectsPerLine = '🔹'.repeat(Math.min(totalProjects, 10))
-        const projectTypes = [...new Set(projects.map(p => p.techStack[0]))].length
-        
-        return `${projectsPerLine}\n\n` +
-          `📊 Portfolio Highlights:\n` +
-          `🎯 ${totalProjects} unique projects\n` +
-          `🔧 ${projectTypes} different primary technologies\n` +
-          `💪 ${techStacks.length} total technologies mastered\n\n` +
-          `Each project represents a milestone in my development journey`
-      })()
-    },
-    {
-      title: "Tech Stack Evolution",
-      content: `My Journey Through Different Technologies\n\n` +
-        `🎨 Frontend Development\n` +
-        `${techStacks.filter(tech => techCategories.frontend.includes(tech)).join(' • ')}\n\n` +
-        `⚙️ Backend & Databases\n` +
-        `${techStacks.filter(tech => techCategories.backend.includes(tech)).join(' • ')}\n\n` +
-        `⛓️ Blockchain Development\n` +
-        `${techStacks.filter(tech => techCategories.blockchain.includes(tech)).join(' • ')}\n\n` +
-        `🤖 AI & Machine Learning\n` +
-        `${techStacks.filter(tech => techCategories.ai.includes(tech)).join(' • ')}\n\n` +
-        `🛠️ Development Tools\n` +
-        `${techStacks.filter(tech => techCategories.tools.includes(tech)).join(' • ')}`
-    },
-    {
-      title: "Most Used Technologies",
-      content: mostUsedTech.map(([tech, count], index) => {
-        const percentage = Math.round((count / totalProjects) * 100)
-        const category = Object.entries(techCategories)
-          .find(([_, techs]) => techs.includes(tech))?.[0] || 'other'
-        
-        const categoryEmojis = {
-          frontend: '🎨',
-          backend: '⚙️',
-          blockchain: '⛓️',
-          ai: '🤖',
-          tools: '🛠️',
-          other: '📦'
-        }
-
-        const medals = ['🥇', '🥈', '🥉']
-        const progressBar = '▓'.repeat(Math.floor(percentage/10)) + '░'.repeat(10 - Math.floor(percentage/10))
-
-        return `${medals[index]} ${categoryEmojis[category]} ${tech}\n${progressBar} ${count} projects (${percentage}%)`
-      }).join('\n\n')
-    },
-    {
-      title: "Personal Favorite Project",
-      content: (() => {
-        const favoriteProject = projects.find(project => project.favorite)
-        if (!favoriteProject) return "Coming soon..."
-        
-        return `✨ ${favoriteProject.title} ✨\n\n` +
-          `${favoriteProject.description}\n\n` +
-          `🛠️ Built with: ${favoriteProject.techStack.join(', ')}\n` +
-          `🔗 ${favoriteProject.link}`
-      })()
-    },
-    {
-      title: "Development Timeline",
-      content: (() => {
-        const firstProject = projects[0]
-        const latestProject = projects[projects.length - 1]
-        const totalTechs = [...new Set(projects.flatMap(p => p.techStack))].length
-
-        return `📈 Journey Progress\n\n` +
-          `🌱 Started with: "${firstProject.title}"\n` +
-          `Built using: ${firstProject.techStack.join(', ')}\n\n` +
-          `🚀 Latest: "${latestProject.title}"\n` +
-          `Using: ${latestProject.techStack.join(', ')}\n\n` +
-          `💡 Growth: From ${firstProject.techStack.length} to ${latestProject.techStack.length} technologies per project\n` +
-          `🎯 Total unique technologies mastered: ${totalTechs}`
-      })()
-    },
-    {
-      title: "🎉 Your adventure through my portfolio awaits!",
-      content: "✨ Scroll through to see all projects in detail"
-    }
-  ]
-
-  useEffect(() => {
-    if (!isPaused && introStep < introSlides.length) {
-      const timer = setTimeout(() => {
-        setIntroStep(prev => prev + 1)
-      }, 3000)
-      return () => clearTimeout(timer)
-    } else if (introStep >= introSlides.length) {
-      const timer = setTimeout(() => {
-        setShowIntro(false)
-      }, 1000)
-      return () => clearTimeout(timer)
-    }
-  }, [introStep, isPaused])
+function ProjectRow({ project, index, onHover, onLeave }) {
+  const [expanded, setExpanded] = useState(false)
 
   return (
-    <>
-      <AnimatePresence>
-      {showIntro ? (
-        <motion.div
-          className="fixed inset-0 bg-white dark:bg-[#121212] flex items-center justify-center z-50"
-          exit={{ opacity: 0 }}
-        >
-          <div className="absolute top-4 right-4 flex gap-2">
-            <button
-              onClick={() => setIsPaused(!isPaused)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              {isPaused ? 
-                <span className="text-2xl">▶️</span> : 
-                <span className="text-2xl">⏸️</span>
-              }
-            </button>
-            <button
-              onClick={() => setShowIntro(false)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              <span className="text-2xl">⏭️</span>
-            </button>
-          </div>
-          <AnimatePresence mode='wait'>
-            {introStep < introSlides.length && (
-              <motion.div
-                key={introStep}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.2 }}
-                className="text-center p-8 max-w-2xl"
-              >
-                <motion.h2 
-                  className="text-4xl font-bold mb-4 text-gray-900 dark:text-white"
-                  initial={{ y: 20 }}
-                  animate={{ y: 0 }}
-                >
-                  {introSlides[introStep].title}
-                </motion.h2>
-                <motion.p 
-                  className="text-xl text-gray-600 dark:text-gray-300 whitespace-pre-line"
-                  initial={{ y: 20 }}
-                  animate={{ y: 0 }}
-                >
-                  {introSlides[introStep].content}
-                </motion.p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
-        ) : (
-          <div className="max-w-7xl mx-auto px-4 py-8">
-            <motion.div 
-              className="mb-8"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              <Link 
-                href="/"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 inline-block mb-4"
-              >
-                ← Back
-              </Link>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-                All Projects
-              </h1>
-            </motion.div>
-            <ProjectsList projects={projects} />
-          </div>
-        )}
-      </AnimatePresence>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.2) }}
+    >
+      <div
+        className="track-row rounded-lg cursor-pointer"
+        onClick={() => setExpanded(!expanded)}
+        onMouseEnter={() => onHover(project.imageUrl)}
+        onMouseLeave={onLeave}
+      >
+        {/* Main row */}
+        <div className="flex items-center gap-4 px-4 py-4">
+          <span className="w-8 text-right text-sm tabular-nums text-warm-400 dark:text-warm-600 flex-shrink-0">
+            {String(index + 1).padStart(2, '0')}
+          </span>
 
-      <SocialLinks />
-      <ScrollArrow />
-    </>
+          {project.imageUrl && (
+            <div className="w-10 h-10 relative rounded overflow-hidden flex-shrink-0">
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
+                fill
+                loading="lazy"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          )}
+
+          <div className="flex-1 min-w-0">
+            <p className="font-medium text-sm truncate">
+              {project.title === "ChaoS/UI" || project.title === "GlitchLabs" ? (
+                <span className="glitch-text" data-text={project.title}>{project.title}</span>
+              ) : (
+                project.title
+              )}
+              {project.favorite && (
+                <span className="ml-2 inline-block w-1.5 h-1.5 rounded-full bg-glow" />
+              )}
+            </p>
+            <p className="text-xs text-warm-500 dark:text-warm-500 truncate">
+              {project.techStack.slice(0, 4).join(' / ')}
+            </p>
+          </div>
+
+          <span className="text-xs text-warm-400 dark:text-warm-600 tabular-nums flex-shrink-0 hidden sm:block">
+            {project.techStack.length} tools
+          </span>
+
+          <span className={`text-warm-400 text-xs transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}>
+            ▼
+          </span>
+        </div>
+
+        {/* Expanded detail */}
+        <AnimatePresence>
+          {expanded && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="overflow-hidden"
+            >
+              <div className="px-4 pb-5 pl-16">
+                {project.imageUrl && (
+                  <div className="w-full max-w-lg h-48 relative rounded-lg overflow-hidden mb-4">
+                    <Image
+                      src={project.imageUrl}
+                      alt={project.title}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                )}
+                <p className="text-sm text-warm-600 dark:text-warm-400 leading-relaxed mb-4 max-w-xl">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {project.techStack.map((tech, j) => (
+                    <span
+                      key={j}
+                      className="text-xs px-2 py-0.5 rounded bg-warm-200/50 dark:bg-warm-800/50 text-warm-600 dark:text-warm-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-glow hover:underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Visit project ↗
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  )
+}
+
+export default function ProjectsPage() {
+  const [filter, setFilter] = useState('all')
+  const [previewImage, setPreviewImage] = useState(null)
+  const [isDesktop, setIsDesktop] = useState(false)
+
+  useEffect(() => {
+    setIsDesktop(window.innerWidth >= 1024 && !('ontouchstart' in window))
+  }, [])
+
+  const visibleProjects = projects.filter(p => !p.hidden)
+
+  const categories = {
+    all: 'All',
+    favorites: 'Favorites',
+    frontend: 'Frontend',
+    fullstack: 'Full-Stack',
+    blockchain: 'Blockchain',
+    ai: 'AI',
+  }
+
+  const filtered = visibleProjects.filter(p => {
+    if (filter === 'all') return true
+    if (filter === 'favorites') return p.favorite
+    if (filter === 'blockchain') return p.techStack.some(t => ['Solidity', 'Web3.js', 'Ethers.js'].includes(t))
+    if (filter === 'ai') return p.techStack.some(t => ['OpenAI API', 'HuggingFace', 'Claude API'].includes(t))
+    if (filter === 'fullstack') return p.techStack.some(t => ['Node.js', 'Express', 'MongoDB', 'Express.js', 'PostgreSQL'].includes(t))
+    if (filter === 'frontend') return p.techStack.some(t => ['React', 'Next.js', 'Vite'].includes(t)) && !p.techStack.some(t => ['Node.js', 'Express', 'MongoDB', 'Express.js'].includes(t))
+    return true
+  })
+
+  // Count per category for labels
+  const counts = Object.fromEntries(
+    Object.keys(categories).map(key => {
+      const count = visibleProjects.filter(p => {
+        if (key === 'all') return true
+        if (key === 'favorites') return p.favorite
+        if (key === 'blockchain') return p.techStack.some(t => ['Solidity', 'Web3.js', 'Ethers.js'].includes(t))
+        if (key === 'ai') return p.techStack.some(t => ['OpenAI API', 'HuggingFace', 'Claude API'].includes(t))
+        if (key === 'fullstack') return p.techStack.some(t => ['Node.js', 'Express', 'MongoDB', 'Express.js', 'PostgreSQL'].includes(t))
+        if (key === 'frontend') return p.techStack.some(t => ['React', 'Next.js', 'Vite'].includes(t)) && !p.techStack.some(t => ['Node.js', 'Express', 'MongoDB', 'Express.js'].includes(t))
+        return true
+      }).length
+      return [key, count]
+    })
+  )
+
+  return (
+    <div className="min-h-screen pt-20 pb-24">
+      <div className="max-w-3xl mx-auto px-6">
+        {/* Header */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="text-xs text-warm-500 dark:text-warm-500 tracking-widest mb-1">
+            FULL TRACKLIST
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-2">
+            Projects
+          </h1>
+          <p className="text-sm text-warm-500 dark:text-warm-500">
+            {visibleProjects.length} tracks — click any to expand
+          </p>
+        </motion.div>
+
+        {/* Filters with counts */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {Object.entries(categories).map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => setFilter(key)}
+              className={`text-xs px-3 py-1.5 rounded-md transition-all duration-200 ${
+                filter === key
+                  ? 'bg-glow text-warm-900 font-semibold'
+                  : 'text-warm-500 hover:text-warm-800 dark:hover:text-warm-200 border border-warm-200 dark:border-warm-800'
+              }`}
+            >
+              {label}
+              <span className="ml-1 opacity-60">{counts[key]}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Divider */}
+        <div className="h-px bg-warm-200 dark:bg-warm-800 mb-1" />
+
+        {/* Track list */}
+        <div>
+          {filtered.map((project, i) => (
+            <ProjectRow
+              key={project.id + '-' + project.title}
+              project={project}
+              index={i}
+              onHover={(img) => isDesktop && setPreviewImage(img)}
+              onLeave={() => setPreviewImage(null)}
+            />
+          ))}
+        </div>
+
+        <div className="h-px bg-warm-200 dark:bg-warm-800 mt-1" />
+
+        {/* Stats */}
+        <div className="mt-6 flex gap-8 text-xs text-warm-400 dark:text-warm-600">
+          <span>{filtered.length} projects</span>
+          <span>{[...new Set(filtered.flatMap(p => p.techStack))].length} technologies</span>
+        </div>
+      </div>
+
+      {/* Floating preview on desktop */}
+      <FloatingPreview imageUrl={previewImage} visible={!!previewImage} />
+    </div>
   )
 }
