@@ -62,13 +62,13 @@ function ExperienceBlock({ experience, index }) {
                 ) : (
                   <span className="text-glow">{experience.company}</span>
                 )}
-                <span className="text-space-500 dark:text-space-500"> — {experience.location}</span>
+                <span className="text-space-700 dark:text-space-300"> — {experience.location}</span>
               </p>
             </div>
           </div>
 
           {/* Duration */}
-          <div className="flex gap-3 text-xs text-space-500 dark:text-space-500 mb-4">
+          <div className="flex gap-3 text-xs text-space-700 dark:text-space-300 mb-4">
             <span>{experience.duration}</span>
             <span className="text-glow font-semibold">{duration}</span>
           </div>
@@ -109,13 +109,13 @@ export default function ExperiencePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-xs text-space-500 dark:text-space-500 tracking-widest mb-1">
+          <p className="text-xs text-space-700 dark:text-space-300 tracking-widest mb-1">
             LINER NOTES
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-2">
             Experience
           </h1>
-          <p className="text-sm text-space-500 dark:text-space-500">
+          <p className="text-sm text-space-700 dark:text-space-300">
             The journey so far
           </p>
           <div className="h-px bg-space-200 dark:bg-space-800 mt-6" />

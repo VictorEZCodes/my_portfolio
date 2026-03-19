@@ -138,17 +138,17 @@ export default function AudioPlayer({ onPlayStateChange }) {
 
         <div className="flex-1 min-w-0">
           <p className="text-xs font-medium truncate">Now Playing</p>
-          <p className="text-[10px] text-space-500 dark:text-space-500 truncate">Portfolio Vibes</p>
+          <p className="text-[10px] text-space-700 dark:text-space-300 truncate">Portfolio Vibes</p>
         </div>
 
-        <span className="text-[10px] tabular-nums text-space-400 dark:text-space-600 hidden sm:block">
+        <span className="text-[10px] tabular-nums text-space-600 dark:text-space-400 hidden sm:block">
           {fmt(currentTime)} / {fmt(duration)}
         </span>
 
         <div className="hidden sm:flex items-center gap-2">
           <button
             onClick={toggleMute}
-            className="text-space-400 dark:text-space-600 hover:text-glow transition-colors"
+            className="text-space-600 dark:text-space-400 hover:text-glow transition-colors"
           >
             {muted || volume === 0 ? (
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

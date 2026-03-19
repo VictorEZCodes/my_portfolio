@@ -1,5 +1,5 @@
 import './globals.css'
-import { Space_Grotesk } from 'next/font/google'
+import { Architects_Daughter } from 'next/font/google'
 import Navbar from './components/Navbar'
 import CommandPalette from './components/CommandPalette'
 import PageTransition from './components/PageTransition'
@@ -8,9 +8,9 @@ import AudioPlayer from './components/AudioPlayer'
 import { AudioProvider } from './context/AudioContext'
 import LayoutClient from './components/LayoutClient'
 
-const spaceGrotesk = Space_Grotesk({
+const architectsDaughter = Architects_Daughter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: '400',
 })
 
 export const metadata = {
@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={spaceGrotesk.className}>
+    <html lang="en" className={architectsDaughter.className}>
       <head>
         <script dangerouslySetInnerHTML={{
           __html: `

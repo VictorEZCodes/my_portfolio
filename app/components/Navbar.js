@@ -78,7 +78,7 @@ export default function Navbar() {
                 className={`px-3 py-1.5 text-sm rounded-md transition-all duration-200 ${
                   pathname === link.href
                     ? 'text-glow font-semibold'
-                    : 'text-space-500 dark:text-space-400 hover:text-space-800 dark:hover:text-space-200'
+                    : 'text-space-700 dark:text-space-300 hover:text-space-800 dark:hover:text-space-200'
                 }`}
               >
                 {link.label}
@@ -96,7 +96,7 @@ export default function Navbar() {
             </a>
             <button
               onClick={toggleTheme}
-              className="p-1.5 rounded-md text-space-500 dark:text-space-400 hover:text-glow transition-colors"
+              className="p-1.5 rounded-md text-space-700 dark:text-space-300 hover:text-glow transition-colors"
             >
               {darkMode ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
             </button>
@@ -113,7 +113,7 @@ export default function Navbar() {
             if (link.external) {
               return (
                 <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-0.5 text-space-400 dark:text-space-600 transition-colors">
+                  className="flex flex-col items-center gap-0.5 text-space-600 dark:text-space-400 transition-colors">
                   <Icon className="h-4 w-4" />
                   <span className="text-[10px]">{link.label}</span>
                 </a>
@@ -122,7 +122,7 @@ export default function Navbar() {
 
             return (
               <Link key={link.href} href={link.href}
-                className={`flex flex-col items-center gap-0.5 transition-colors ${active ? 'text-glow' : 'text-space-400 dark:text-space-600'}`}>
+                className={`flex flex-col items-center gap-0.5 transition-colors ${active ? 'text-glow' : 'text-space-600 dark:text-space-400'}`}>
                 <Icon className={`h-4 w-4 ${active ? 'scale-110' : ''} transition-transform`} />
                 <span className={`text-[10px] ${active ? 'font-semibold' : ''}`}>{link.label}</span>
               </Link>

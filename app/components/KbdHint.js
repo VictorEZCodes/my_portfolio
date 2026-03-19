@@ -21,11 +21,11 @@ export default function KbdHint() {
   return (
     <div
       className="fixed bottom-5 right-5 z-40 flex items-center gap-1.5 px-3 py-1.5 text-xs
-      text-space-400 dark:text-space-600
+      text-space-600 dark:text-space-400
       bg-space-100/80 dark:bg-space-900/80 rounded-md backdrop-blur-sm
       border border-space-200/50 dark:border-space-800/50
       animate-[fadeIn_0.3s_ease-out] cursor-pointer
-      hover:text-space-600 dark:hover:text-space-400 transition-colors"
+      hover:text-space-800 dark:hover:text-space-200 transition-colors"
       onClick={() => setVisible(false)}
     >
       <kbd className="font-semibold text-glow">{isMac ? '\u2318' : 'Ctrl'}</kbd>

@@ -72,7 +72,7 @@ function Waveform() {
       </div>
 
       <div className={`absolute -bottom-2 left-1/2 -translate-x-1/2 text-[10px] tracking-widest transition-opacity duration-500 ${
-        playing ? 'text-glow opacity-100' : 'text-space-400 dark:text-space-600 opacity-60'
+        playing ? 'text-glow opacity-100' : 'text-space-600 dark:text-space-400 opacity-60'
       }`}>
         {playing ? 'NOW PLAYING' : 'PRESS PLAY'}
       </div>
@@ -90,7 +90,7 @@ function TrackRow({ number, project, onHover, onLeave }) {
         onMouseEnter={() => { setHovered(true); onHover(project.imageUrl) }}
         onMouseLeave={() => { setHovered(false); onLeave() }}
       >
-        <span className="w-8 text-right text-sm tabular-nums text-space-400 dark:text-space-600 group-hover:text-glow transition-colors">
+        <span className="w-8 text-right text-sm tabular-nums text-space-600 dark:text-space-400 group-hover:text-glow transition-colors">
           {String(number).padStart(2, '0')}
         </span>
 
@@ -98,12 +98,12 @@ function TrackRow({ number, project, onHover, onLeave }) {
           <p className="font-medium text-sm truncate group-hover:text-glow transition-colors">
             {project.title}
           </p>
-          <p className="text-xs text-space-500 dark:text-space-500 truncate">
+          <p className="text-xs text-space-700 dark:text-space-300 truncate">
             {project.techStack.slice(0, 3).join(' / ')}
           </p>
         </div>
 
-        <span className="text-xs text-space-400 dark:text-space-600 tabular-nums hidden sm:block">
+        <span className="text-xs text-space-600 dark:text-space-400 tabular-nums hidden sm:block">
           {project.techStack.length} tools
         </span>
 
@@ -145,7 +145,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <p className="text-sm text-space-400 dark:text-space-500 mb-4 tracking-wide">
+              <p className="text-sm text-space-600 dark:text-space-400 mb-4 tracking-wide">
                 FULLSTACK DEVELOPER — LAGOS, NIGERIA
               </p>
               <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold leading-[0.9] mb-6">
@@ -166,7 +166,7 @@ export default function Home() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-space-400 dark:text-space-500 hover:text-glow transition-colors duration-200"
+                      className="text-space-600 dark:text-space-400 hover:text-glow transition-colors duration-200"
                       whileHover={{ y: -2 }}
                       aria-label={social.label}
                     >
@@ -195,7 +195,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
-          <span className="text-xs text-space-400 dark:text-space-500 tracking-widest">SCROLL</span>
+          <span className="text-xs text-space-600 dark:text-space-400 tracking-widest">SCROLL</span>
           <div className="w-px h-8 bg-gradient-to-b from-glow/40 to-transparent" />
         </motion.div>
       </section>
@@ -217,7 +217,7 @@ export default function Home() {
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-glow to-glow-warm bg-clip-text text-transparent">{stat.value}</p>
-                <p className="text-xs text-space-500 dark:text-space-500 tracking-wide mt-0.5">{stat.label}</p>
+                <p className="text-xs text-space-700 dark:text-space-300 tracking-wide mt-0.5">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -235,12 +235,12 @@ export default function Home() {
           >
             <div className="flex items-center justify-between mb-8">
               <div>
-                <p className="text-xs text-space-500 dark:text-space-500 tracking-widest mb-1">TRACKLIST</p>
+                <p className="text-xs text-space-700 dark:text-space-300 tracking-widest mb-1">TRACKLIST</p>
                 <h2 className="text-2xl font-bold">Featured Projects</h2>
               </div>
               <Link
                 href="/projects"
-                className="text-sm text-space-500 hover:text-glow transition-colors"
+                className="text-sm text-space-700 dark:text-space-300 hover:text-glow transition-colors"
               >
                 View all {visibleProjects.length} →
               </Link>
@@ -276,12 +276,12 @@ export default function Home() {
           >
             <div className="flex items-center justify-between mb-12">
               <div>
-                <p className="text-xs text-space-500 dark:text-space-500 tracking-widest mb-1">LINER NOTES</p>
+                <p className="text-xs text-space-700 dark:text-space-300 tracking-widest mb-1">LINER NOTES</p>
                 <h2 className="text-2xl font-bold">Experience</h2>
               </div>
               <Link
                 href="/experience"
-                className="text-sm text-space-500 hover:text-glow transition-colors"
+                className="text-sm text-space-700 dark:text-space-300 hover:text-glow transition-colors"
               >
                 View all →
               </Link>
@@ -310,7 +310,7 @@ export default function Home() {
                       )}
                       <h3 className="font-semibold text-base">
                         {exp.title}
-                        <span className="text-space-500 dark:text-space-500 font-normal"> at </span>
+                        <span className="text-space-700 dark:text-space-300 font-normal"> at </span>
                         {exp.company === "GlitchLabs" ? (
                           <span className="glitch-text" data-text="GlitchLabs">GlitchLabs</span>
                         ) : (
@@ -318,7 +318,7 @@ export default function Home() {
                         )}
                       </h3>
                     </div>
-                    <p className="text-xs text-space-500 dark:text-space-500 mb-2">
+                    <p className="text-xs text-space-700 dark:text-space-300 mb-2">
                       {exp.duration} <span className="text-glow font-semibold">· {formatDuration(exp.duration)}</span> — {exp.location}
                     </p>
                     <p className="text-sm text-space-600 dark:text-space-300 leading-relaxed mb-3">
@@ -345,7 +345,7 @@ export default function Home() {
       {/* === FOOTER === */}
       <footer className="py-16 border-t border-space-200/50 dark:border-space-800/50">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-sm text-space-500 dark:text-space-500 mb-4">Get in touch</p>
+          <p className="text-sm text-space-700 dark:text-space-300 mb-4">Get in touch</p>
           <div className="flex justify-center gap-6 mb-6">
             {socials.map((social, i) => {
               const Icon = social.icon
@@ -355,7 +355,7 @@ export default function Home() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-space-400 dark:text-space-500 hover:text-glow transition-colors"
+                  className="text-space-600 dark:text-space-400 hover:text-glow transition-colors"
                   aria-label={social.label}
                 >
                   <Icon size={18} />
@@ -363,7 +363,7 @@ export default function Home() {
               )
             })}
           </div>
-          <p className="text-xs text-space-400 dark:text-space-600">
+          <p className="text-xs text-space-600 dark:text-space-400">
             Victor Ezeanyika — Lagos, Nigeria
           </p>
         </div>
